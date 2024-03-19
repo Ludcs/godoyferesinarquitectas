@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { FaBars } from 'react-icons/fa6';
 import Sidebar from './Sidebar';
 import { AnimatePresence } from 'framer-motion';
+//import HamburgerButton from './HamburgerButton';
 
 export default function Header() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -21,6 +22,7 @@ export default function Header() {
             priority={true}
           />
         </Link>
+        {/* <HamburgerButton /> */}
         <div className="w-full flex justify-end items-center">
           <FaBars
             size={30}
