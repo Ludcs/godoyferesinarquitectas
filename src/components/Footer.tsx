@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <div>Footer</div>;
+  return <main className="px-2 py-8 bg-black text-white ">Footer</main>;
 }
