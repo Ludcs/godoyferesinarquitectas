@@ -64,7 +64,7 @@ export default function Sidebar({ setOpenSideBar }: SidebarProps) {
   return (
     //Motion div 1:
     <motion.div
-      className="w-full h-screen fixed left-0 top-0 origin-top font-bold bg-primary z-20"
+      className="w-full h-screen fixed left-0 top-0 origin-top font-bold bg-primary z-30"
       variants={menuVars}
       initial="initial"
       animate="animate"
