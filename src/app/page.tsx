@@ -1,13 +1,14 @@
 'use client';
+import './home.css';
+import ImageServices from '../../public/assets/images/imageDemo-services.jpg';
 import Header from '@/components/Header';
 import Slider from '@/components/Slider';
 import Team from '../../public/assets/images/team.jpg';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
-import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa6';
-import './home.css';
 
 export default function Home() {
   const Sloganref = useRef(null);
@@ -20,9 +21,8 @@ export default function Home() {
     <main className="w-full">
       <Header />
       <Slider />
-      <div className="h-[900px] w-full bg-primary"></div>
       <section
-        className="py-28 px-2 bg-white transform"
+        className="py-28 px-2 bg-white transform text-start"
         ref={Sloganref}
         style={{
           opacity: isInViewSlogan ? 1 : 0,
@@ -30,10 +30,13 @@ export default function Home() {
           animation: `${isInViewSlogan ? 'fadeIn' : 'none'} 1s ease-in`,
         }}
       >
-        <h1 className="text-3xl font-bold ">
-          Somos las arquitectas mas picantes de todo el condado.
+        <h1 className="text-3xl font-bold px-2">
+          <span className="text-5xl font-bold">_</span>
+          {''}somos las arquitectas mas picantes de todo el condado.
         </h1>
-        <p className="text-lg py-3">Contratanos o hay bala</p>
+        <p className="text-md py-5 uppercase font-bold px-2">
+          Contratanos o hay bala
+        </p>
       </section>
       <section
         className="w-full"
@@ -54,12 +57,47 @@ export default function Home() {
       <div className="w-full flex justify-center items-center py-28 bg-white">
         <Link
           href={'/nosotras'}
-          className="w-full flex justify-center items-center gap-4 text-lg hover:bg-primary hover:text-white transition-all duration-200"
+          className="w-full py-2 flex justify-center items-center gap-4 text-lg hover:bg-primary hover:text-white transition-all duration-200"
         >
-          <p>Conocenos</p>
+          <p>Quienes somos?</p>
           <FaArrowRight size={30} />
         </Link>
       </div>
+      <section className="py-28 bg-primary">
+        <p className="text-3xl font-bold px-2">
+          <span className="text-5xl font-bold">_</span>
+          {''}aca va a ir una frase inspiradora y ganadora, toda bien profunda.
+        </p>
+        <p className="pt-10 px-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sint
+          placeat tempora, necessitatibus natus ad maxime.
+        </p>
+        <Link
+          href={'/servicios'}
+          className="w-full mt-10 mb-10 py-2 flex justify-center items-center gap-4 text-lg hover:bg-white hover:text-primary transition-all duration-200"
+        >
+          <p>Nuestros servicios</p>
+          <FaArrowRight size={30} />
+        </Link>
+        <div className="w-full">
+          <Image
+            src={ImageServices}
+            alt="Imagen para la seccion de servicios"
+            priority={true}
+            width={500}
+            height={350}
+          />
+        </div>
+      </section>
+      <section className="w-full py-14 flex flex-col justify-center items-center text-center">
+        <p className="text-3xl font-bold px-2">Tenes un proyecto en mente?</p>
+        <Link
+          href={'/contacto'}
+          className="mt-10 mb-10 text-lg px-5 py-2 border border-solid border-black hover:bg-black hover:text-white transition-all duration-200"
+        >
+          Contactanos
+        </Link>
+      </section>
     </main>
   );
 }

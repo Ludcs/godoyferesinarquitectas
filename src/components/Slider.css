@@ -5,9 +5,9 @@
 
 div.swiper-button-prev,
 div.swiper-button-next {
-  color: rgb(0, 0, 0);
-  background-color: #fff;
-  padding: 15px;
+  color: rgb(255, 255, 255);
+  /* background-color: #fff; */
+  /* padding: 15px; */
 }
 
 @media screen and (max-width: 640px) {
@@ -18,7 +18,7 @@ div.swiper-button-next {
 }
 
 span.swiper-pagination-bullet {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 @media screen and (min-width: 640px) {
