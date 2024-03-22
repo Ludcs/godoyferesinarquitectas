@@ -3,6 +3,7 @@ import './home.css';
 import ImageServices from '../../public/assets/images/imageDemo-services.jpg';
 import Header from '@/components/Header';
 import Slider from '@/components/Slider';
+import ScrollToTop from '@/components/ScrollToTop';
 import Team from '../../public/assets/images/team.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,17 +18,25 @@ export default function Home() {
   const TeamImageref = useRef(null);
   const isInViewTeamImage = useInView(TeamImageref, { once: true });
 
+  const PhraseServicesref = useRef(null);
+  const inInViewPhraseServices = useInView(PhraseServicesref, { once: true });
+
+  const ImageServicesref = useRef(null);
+  const inInViewImageServices = useInView(ImageServicesref, { once: true });
+
   return (
     <main className="w-full">
+      <ScrollToTop />
       <Header />
       <Slider />
+      {/* <div className="w-full h-[700px] bg-red-500"></div> */}
       <section
         className="py-28 px-2 bg-white transform text-start"
         ref={Sloganref}
         style={{
           opacity: isInViewSlogan ? 1 : 0,
           transition: 'opacity 1s ease-out',
-          animation: `${isInViewSlogan ? 'fadeIn' : 'none'} 1s ease-in`,
+          animation: `${isInViewSlogan ? 'fadeIn' : 'none'} 0.5s ease-in`,
         }}
       >
         <h1 className="text-3xl font-bold px-2">
@@ -63,23 +72,45 @@ export default function Home() {
           <FaArrowRight size={30} />
         </Link>
       </div>
-      <section className="pt-28 bg-primary">
-        <p className="text-3xl font-bold px-2">
-          <span className="text-5xl font-bold">_</span>
-          {''}aca va a ir una frase inspiradora y ganadora, toda bien profunda.
-        </p>
-        <p className="pt-10 px-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sint
-          placeat tempora, necessitatibus natus ad maxime.
-        </p>
-        <Link
-          href={'/servicios'}
-          className="w-full mt-10 mb-10 py-2 flex justify-center items-center gap-4 text-lg hover:bg-white hover:text-primary transition-all duration-200"
+      <section>
+        <div className="w-full py-28 bg-primary">
+          <div
+            ref={PhraseServicesref}
+            style={{
+              opacity: inInViewPhraseServices ? 1 : 0,
+              transition: 'opacity 1s ease-out',
+              animation: `${
+                inInViewPhraseServices ? 'fadeIn' : 'none'
+              } 1s ease-in`,
+            }}
+          >
+            <p className="text-3xl font-bold px-2">
+              <span className="text-5xl font-bold">_</span>
+              {''}aca va a ir una frase inspiradora y ganadora, toda bien
+              profunda.
+            </p>
+            <p className="pt-10 px-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              sint placeat tempora, necessitatibus natus ad maxime.
+            </p>
+            <Link
+              href={'/servicios'}
+              className="w-full mt-10 py-2 flex justify-center items-center gap-4 text-lg hover:bg-white hover:text-primary transition-all duration-200"
+            >
+              <p>Nuestros servicios</p>
+              <FaArrowRight size={30} />
+            </Link>
+          </div>
+        </div>
+        <div
+          className="w-full"
+          ref={ImageServicesref}
+          style={{
+            transform: inInViewImageServices ? 'none' : 'translateX(200px)',
+            opacity: inInViewImageServices ? 1 : 0,
+            transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          }}
         >
-          <p>Nuestros servicios</p>
-          <FaArrowRight size={30} />
-        </Link>
-        <div className="w-full">
           <Image
             src={ImageServices}
             alt="Imagen para la seccion de servicios"

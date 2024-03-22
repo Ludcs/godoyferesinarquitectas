@@ -1,17 +1,17 @@
 import Image from 'next/image';
-import LogoFooter from '../../public/assets/logos-png/redondo-white.png';
+import LogoFooter from '../../public/assets/logos-png/redondo-white-2.png';
 import Link from 'next/link';
 
 export default function Footer() {
-  // const emailAddress = 'godoyferesinarquitectas@gmail.com';
-  // const encodedEmail = encodeURIComponent(emailAddress);
-  // const gmailLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${encodedEmail}`;
-
   const emailAddress = 'godoyferesinarquitectas@gmail.com';
-  const mailtoLink = `mailto:${emailAddress}`;
+  const encodedEmail = encodeURIComponent(emailAddress);
+  const gmailLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${encodedEmail}`;
+
+  // const emailAddress = 'godoyferesinarquitectas@gmail.com';
+  // const mailtoLink = `mailto:${emailAddress}`;
 
   return (
-    <main className=" px-2 pt-8 pb-2 flex flex-col items-start justify-center font-semibold bg-black text-white gap-5">
+    <main className=" px-2 pt-8 pb-2 flex flex-col items-start justify-center font-semibold bg-[#161616] text-white gap-5">
       <Image
         src={LogoFooter}
         alt="Logo Godoy + Feresin Arquitectas - Pie de pagina"
@@ -49,7 +49,7 @@ export default function Footer() {
       <div className=" my-2 flex flex-col gap-2">
         <p>- email:</p>
         <Link
-          href={mailtoLink}
+          href={gmailLink}
           target="_blank"
           className="underline underline-offset-8"
         >
@@ -83,7 +83,8 @@ export default function Footer() {
       </div>
       <div className="mt-2 mb-3">
         <p className="text-xs font-normal">
-          ® 2023 - G<span className="italic">+</span>F ARQUITECTAS
+          ® 2023 - G<span className="italic">+</span>F{' '}
+          <span className="italic">arquitectas</span>
         </p>
       </div>
     </main>
