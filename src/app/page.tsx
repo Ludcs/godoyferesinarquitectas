@@ -63,7 +63,7 @@ export default function Home() {
           <FaArrowRight size={30} />
         </Link>
       </div>
-      <section className="py-28 bg-primary">
+      <section className="pt-28 bg-primary">
         <p className="text-3xl font-bold px-2">
           <span className="text-5xl font-bold">_</span>
           {''}aca va a ir una frase inspiradora y ganadora, toda bien profunda.

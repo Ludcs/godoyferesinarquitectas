@@ -24,6 +24,11 @@ const myFont = localFont({
       style: 'italic',
     },
     {
+      path: './fonts/Aileron-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
       path: './fonts/Aileron-Bold.woff2',
       weight: '700',
       style: 'normal',
