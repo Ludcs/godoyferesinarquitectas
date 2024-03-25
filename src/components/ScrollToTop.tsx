@@ -24,13 +24,9 @@ export default function ScrollToTop() {
   };
 
   return (
-    <div>
+    <div className="fixed bottom-[-8px] right-2 z-10 opacity-40 rounded rounded-t-md bg-[#4F575F] text-white cursor-pointer">
       {showScrollTopButtom && (
-        <BsFillArrowUpSquareFill
-          size={40}
-          className="fixed bottom-0 right-2 z-10 opacity-40 cursor-pointer"
-          onClick={scrollTop}
-        />
+        <BsFillArrowUpSquareFill size={40} onClick={scrollTop} />
       )}
     </div>
   );

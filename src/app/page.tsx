@@ -47,6 +47,7 @@ export default function Home() {
           Contratanos o hay bala
         </p>
       </section>
+
       <section
         className="w-full"
         ref={TeamImageref}
@@ -102,6 +103,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        {/* TODO: solucionar translateX(200px) rompe el ancho total de la web, para translateX(-200px) si funciona */}
         <div
           className="w-full"
           ref={ImageServicesref}
