@@ -4,7 +4,7 @@ import ImageServices from '../../public/assets/images/imageDemo-services.jpg';
 import Header from '@/components/Header';
 import Slider from '@/components/Slider';
 import ScrollToTop from '@/components/ScrollToTop';
-import Team from '../../public/assets/images/team.jpg';
+import Team from '../../public/assets/images/juntas.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
@@ -29,7 +29,6 @@ export default function Home() {
       <ScrollToTop />
       <Header />
       <Slider />
-      {/* <div className="w-full h-[700px] bg-red-500"></div> */}
       <section
         className="py-28 px-2 bg-white transform text-start"
         ref={Sloganref}
@@ -73,7 +72,7 @@ export default function Home() {
           <FaArrowRight size={30} />
         </Link>
       </div>
-      <section>
+      <section className="w-full">
         <div className="w-full py-28 bg-primary">
           <div
             ref={PhraseServicesref}
@@ -108,9 +107,11 @@ export default function Home() {
           className="w-full"
           ref={ImageServicesref}
           style={{
-            transform: inInViewImageServices ? 'none' : 'translateX(200px)',
             opacity: inInViewImageServices ? 1 : 0,
-            transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            transition: 'all 1s ease',
+            animation: `${
+              inInViewImageServices ? 'fadeInRight' : 'none'
+            } 1s ease-in`,
           }}
         >
           <Image
@@ -122,7 +123,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="w-full py-14 flex flex-col justify-center items-center text-center">
+      <section className="w-full py-14 flex flex-col justify-center items-center text-center bg-[#F3F3F3]">
         <p className="text-3xl font-bold px-2">Tenes un proyecto en mente?</p>
         <Link
           href={'/contacto'}
