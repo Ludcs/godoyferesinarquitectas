@@ -1,16 +1,15 @@
 'use client';
 
 import '../home.css';
-import 'rsuite/Timeline/styles/index.css';
-import { Timeline } from 'rsuite';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import Team from '../../../public/assets/images/juntas.png';
 import Flo from '../../../public/assets/images/flo.png';
 import Fio from '../../../public/assets/images/fio.png';
-import Header from '@/components/Header';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+import Header from '@/components/Header';
+import Timeline from '@/components/Timeline';
 
 export default function Nosotras() {
   const TopImageref = useRef(null);
@@ -25,26 +24,29 @@ export default function Nosotras() {
   const OurStudyref = useRef(null);
   const isInViewOurStudyRef = useInView(OurStudyref, { once: true });
 
-  const items = [
-    {
-      title: 'May 1940',
-      cardTitle: 'Dunkirk',
-      url: 'http://www.history.com',
-      cardSubtitle:
-        'Men of the British Expeditionary Force (BEF) wade out to..',
-      cardDetailedText:
-        'Men of the British Expeditionary Force (BEF) wade out to..',
-    },
-    {
-      title: 'May 1940',
-      cardTitle: 'Dunkirk',
-      url: 'http://www.history.com',
-      cardSubtitle:
-        'Men of the British Expeditionary Force (BEF) wade out to..',
-      cardDetailedText:
-        'Men of the British Expeditionary Force (BEF) wade out to..',
-    },
-  ];
+  const Mentionsref = useRef(null);
+  const isInViewMentionsRef = useInView(Mentionsref, { once: true });
+
+  // const items = [
+  //   {
+  //     title: 'May 1940',
+  //     cardTitle: 'Dunkirk',
+  //     url: 'http://www.history.com',
+  //     cardSubtitle:
+  //       'Men of the British Expeditionary Force (BEF) wade out to..',
+  //     cardDetailedText:
+  //       'Men of the British Expeditionary Force (BEF) wade out to..',
+  //   },
+  //   {
+  //     title: 'May 1940',
+  //     cardTitle: 'Dunkirk',
+  //     url: 'http://www.history.com',
+  //     cardSubtitle:
+  //       'Men of the British Expeditionary Force (BEF) wade out to..',
+  //     cardDetailedText:
+  //       'Men of the British Expeditionary Force (BEF) wade out to..',
+  //   },
+  // ];
 
   return (
     <main className="w-full">
@@ -148,26 +150,20 @@ export default function Nosotras() {
           </article>
         </div>
       </section>
-      <div className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start">
+      <div
+        className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start"
+        ref={Mentionsref}
+        style={{
+          transform: isInViewMentionsRef ? 'none' : 'translateX(-200px)',
+          opacity: isInViewMentionsRef ? 1 : 0,
+          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+        }}
+      >
         <h1 className="text-3xl font-bold px-2">
           <span className="text-5xl font-bold">_</span>
-          {''}distinciones
+          {''}menciones
         </h1>
-        {/* TIMELINE */}
-        {/* <div className="w-full h-[700px]"></div> */}
-        <Timeline className="w-full">
-          <Timeline.Item>16:27:41 Your order starts processing</Timeline.Item>
-          <Timeline.Item>
-            16:28:43 Your order to be ready for delivery
-          </Timeline.Item>
-          <Timeline.Item>
-            16:28:45 Your parcel has been out of the library
-          </Timeline.Item>
-          <Timeline.Item>
-            02:34:41 Send to Shanghai Hongkou Company
-          </Timeline.Item>
-          <Timeline.Item>15:05:29 Sending you a piece</Timeline.Item>
-        </Timeline>
+        <Timeline />
       </div>
 
       <section className="w-full py-14 flex flex-col justify-center items-center text-center bg-[#F3F3F3]">
