@@ -10,6 +10,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Timeline from '@/components/Timeline';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function Nosotras() {
   const TopImageref = useRef(null);
@@ -50,6 +51,7 @@ export default function Nosotras() {
 
   return (
     <main className="w-full">
+      <ScrollToTop />
       <Header />
       <div
         ref={TopImageref}
@@ -63,9 +65,7 @@ export default function Nosotras() {
           src={Team}
           alt="Imagen del equipo Godoy Feresin Arquitectas"
           priority={true}
-          width={500}
-          height={350}
-          className="grayscale w-full"
+          className="grayscale w-full object-cover"
         />
       </div>
       <section
@@ -108,9 +108,8 @@ export default function Nosotras() {
           <Image
             src={Flo}
             alt="Florencia Feresin Arquitecta"
-            className="w-full"
-            width={500}
-            height={350}
+            className="w-full object-cover"
+            priority={true}
           />
           <h3 className="text-lg font-bold pt-4">Florencia FERESIN</h3>
           <p className="text-[#ABABAB]">Arquitecta - CAPER 05456</p>
@@ -136,9 +135,8 @@ export default function Nosotras() {
           <Image
             src={Fio}
             alt="Florencia Feresin Arquitecta"
-            className="w-full"
-            width={500}
-            height={350}
+            className="w-full object-cover"
+            priority={true}
           />
           <h3 className="text-lg font-bold pt-4">Fiorela GODOY</h3>
           <p className="text-[#ABABAB]">Arquitecta - CAPER 05456</p>
@@ -163,7 +161,9 @@ export default function Nosotras() {
           <span className="text-5xl font-bold">_</span>
           {''}menciones
         </h1>
-        <Timeline />
+        <div className="w-full ml-1">
+          <Timeline />
+        </div>
       </div>
 
       <section className="w-full py-14 flex flex-col justify-center items-center text-center bg-[#F3F3F3]">

@@ -28,32 +28,49 @@ export default function Header() {
   // }, []);
 
   //bg-white fixed top-0 shadow-md z-20
+  //fixed top-0 left-0 z-50 shadow-md
+  //const [isScrolled, setIsScrolled] = useState(false);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY;
+  //     if (scrollPosition > 0) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       setIsScrolled(false);
+  //     }
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
   return (
-    <header className="h-[94px]">
-      <div className="px-2 py-8 bg-white fixed top-0 left-0 z-50 shadow-md">
-        <div className="flex justify-between items-center">
-          <Link href={'/'}>
-            <Image
-              src={'/assets/logos-png/rectangle-black.png'}
-              alt="Logo Godoy Feresin Arquitectas"
-              width={500}
-              height={64}
-              priority={true}
-            />
-          </Link>
-          {/* <HamburgerButton /> */}
-          <div className="w-full flex justify-end items-center">
-            <FaBars
-              size={30}
-              className="cursor-pointer"
-              onClick={() => setOpenSideBar(true)}
-            />
-          </div>
+    <div className={`w-full px-2 py-8 bg-white sticky top-0 z-50 shadow-md`}>
+      <div className="flex justify-between items-center">
+        <Link href={'/'}>
+          <Image
+            src={'/assets/logos-png/rectangle-black.png'}
+            alt="Logo Godoy Feresin Arquitectas"
+            width={500}
+            height={64}
+            priority={true}
+          />
+        </Link>
+        {/* <HamburgerButton /> */}
+        <div className="w-full flex justify-end items-center">
+          <FaBars
+            size={30}
+            className="cursor-pointer"
+            onClick={() => setOpenSideBar(true)}
+          />
         </div>
-        <AnimatePresence>
-          {openSideBar && <Sidebar setOpenSideBar={setOpenSideBar} />}
-        </AnimatePresence>
       </div>
-    </header>
+      <AnimatePresence>
+        {openSideBar && <Sidebar setOpenSideBar={setOpenSideBar} />}
+      </AnimatePresence>
+    </div>
   );
 }

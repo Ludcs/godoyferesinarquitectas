@@ -2,7 +2,7 @@ export default function Timeline() {
   return (
     <ol className="relative border-s border-gray-200 dark:border-black">
       <li className="mb-10 ms-4">
-        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-black dark:bg-black"></div>
+        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5  border border-white dark:border-black dark:bg-black"></div>
         <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black">
           February 2022
         </time>
