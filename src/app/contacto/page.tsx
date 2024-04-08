@@ -1,10 +1,13 @@
 import Header from '@/components/Header';
+import MapLocation from '@/components/MapLocation';
 
 export default function Contacto() {
   return (
     <main className="w-full">
       <Header />
-      Contacto
+      <section className="w-full">
+        <MapLocation />
+      </section>
     </main>
   );
 }
