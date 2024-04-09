@@ -16,12 +16,12 @@ export default function MapLocation() {
       minZoom={6}
     >
       <Marker width={50} anchor={[-31.726512111070388, -60.49061190310807]}>
-        {/* <Image
+        <Image
           src={RedondoCoral}
           width={50}
           height={60}
           alt="Marker de localizacion para el estudio de Godoy Feresin Arquitectas"
-        /> */}
+        />
       </Marker>
       <ZoomControl />
     </Map>
