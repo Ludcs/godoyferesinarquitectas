@@ -3,10 +3,38 @@ import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function FormContact() {
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+
   const formRef = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!formRef.current) {
+      console.error('Form element is null');
+      return;
+    }
+    console.log('formRef.current:', formRef.current);
+    setLoading(true);
+
+    emailjs
+      .sendForm('service_bav6g8q', 'template_79d40kl', formRef.current, {
+        publicKey: 'vXTJe7UE607g1Bn9t',
+      })
+      .then(
+        () => {
+          setLoading(false);
+          console.log('SUCCESS!');
+          setSuccessMessage(true);
+          formRef.current?.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setErrorMessage(true);
+        }
+      );
   };
 
   return (
@@ -15,48 +43,48 @@ export default function FormContact() {
       onSubmit={sendEmail}
       className="w-full flex flex-col gap-4 p-2"
     >
-      {/* <label htmlFor="name_input">Nombre y Apellido</label> */}
       <input
         type="text"
-        id="name_input"
-        name="user_name"
         placeholder="Nombre y Apellido"
+        name="user_name"
+        required
         className="p-2  border-b border-black outline-none"
       />
 
-      {/* <label htmlFor="email_input">Email</label> */}
       <input
         type="email"
-        id="email_input"
-        name="user_email"
         placeholder="Email"
+        name="user_email"
+        required
         className="p-2  border-b border-black outline-none"
       />
 
-      {/* <label htmlFor="phone_input">Telefono</label> */}
-      <input
-        type="number"
-        id="phone_input"
-        name="user_phone"
-        placeholder="Telefono"
-        className="p-2  border-b border-black outline-none"
-      />
-
-      {/* <label htmlFor="message_input">Escribinos tu consulta</label> */}
       <textarea
-        name="user_message"
-        id="message_input"
         placeholder="Escribinos tu consulta..."
         cols={30}
         rows={5}
+        name="message"
+        required
         className="p-2  border-b border-black outline-none resize-none"
       ></textarea>
+
       <button
         type="submit"
         className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all ease-in-out"
       >
-        Enviar
+        {loading ? 'Enviando...' : 'Enviar'}
       </button>
+
+      {successMessage && (
+        <span className="py-2 font-bold text-center text-green-500 text-lg">
+          Tu consulta fue enviada!
+        </span>
+      )}
+      {errorMessage && (
+        <span className="py-2 font-bold text-center text-red-500 text-lg">
+          Error al enviar la consulta
+        </span>
+      )}
     </form>
   );
 }

@@ -8,8 +8,8 @@ export default function Contacto() {
   return (
     <main className="w-full">
       <Header />
+      <div className="h-12"></div>
       <FormContact />
-      {/* <div className="h-12"></div> */}
       <MapLocation />
       {/* <div className="h-12"></div> */}
     </main>
