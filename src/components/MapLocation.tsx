@@ -15,6 +15,7 @@ export default function MapLocation() {
         defaultCenter={[-31.72671037047572, -60.49073468241136]}
         defaultZoom={15}
         minZoom={6}
+        metaWheelZoom={true}
       >
         <Marker width={50} anchor={[-31.72671037047572, -60.49073468241136]}>
           <Image

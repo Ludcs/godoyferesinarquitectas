@@ -41,7 +41,7 @@ export default function FormContact() {
     <form
       ref={formRef}
       onSubmit={sendEmail}
-      className="w-full flex flex-col gap-4 p-2"
+      className="w-full flex flex-col gap-4 px-2 pb-7"
     >
       <input
         type="text"
@@ -49,6 +49,7 @@ export default function FormContact() {
         name="user_name"
         required
         className="p-2  border-b border-black outline-none"
+        autoComplete="off"
       />
 
       <input
@@ -57,6 +58,7 @@ export default function FormContact() {
         name="user_email"
         required
         className="p-2  border-b border-black outline-none"
+        autoComplete="off"
       />
 
       <textarea
@@ -66,11 +68,12 @@ export default function FormContact() {
         name="message"
         required
         className="p-2  border-b border-black outline-none resize-none"
+        autoComplete="off"
       ></textarea>
 
       <button
         type="submit"
-        className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all ease-in-out"
+        className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200"
       >
         {loading ? 'Enviando...' : 'Enviar'}
       </button>
