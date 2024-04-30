@@ -40,10 +40,15 @@ export default function Home() {
       >
         <h1 className="text-3xl font-bold px-2">
           <span className="text-5xl font-bold">_</span>
-          {''}somos las arquitectas mas picantes de todo el condado.
+          {''}somos un estudio de arquitectura independiente que proyecta y
+          materializa ideas.
         </h1>
-        <p className="text-md py-5 uppercase font-bold px-2">
-          Contratanos o hay bala
+        <p className="text-md py-5 font-bold px-2">
+          Trabajamos estrechamente con nuestros clientes para atender y resolver
+          sus necesidades, expectativas y deseos. Brindamos un servicio
+          profesional y humano, en compromiso con nuestra sociedad, y
+          perseguimos el diseño creativo para la configuración e identidad de
+          los espacios.
         </p>
       </section>
 
@@ -85,9 +90,8 @@ export default function Home() {
             }}
           >
             <p className="text-3xl font-bold px-2">
-              <span className="text-5xl font-bold">_</span>
-              {''}aca va a ir una frase inspiradora y ganadora, toda bien
-              profunda.
+              “La casa es un refugio, no sólo del cuerpo, sino también de la
+              mente de las personas”
             </p>
             <p className="pt-10 px-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque

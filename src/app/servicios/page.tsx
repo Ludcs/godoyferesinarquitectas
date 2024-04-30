@@ -6,6 +6,7 @@ import { useInView } from 'framer-motion';
 
 import Header from '@/components/Header';
 import ServicesTopImg from '../../../public/assets/images/services_top_img.jpg';
+import ServicesMidleImg from '../../../public/assets/images/services_midle_img.jpg';
 import Image from 'next/image';
 import ScrollToTop from '@/components/ScrollToTop';
 import Link from 'next/link';
@@ -26,6 +27,9 @@ export default function Servicios() {
   const Service3Ref = useRef(null);
   const isInViewService3Ref = useInView(Service3Ref, { once: true });
 
+  const MidleImageref = useRef(null);
+  const isInViewMidleImageRef = useInView(MidleImageref, { once: true });
+
   const Service4Ref = useRef(null);
   const isInViewService4Ref = useInView(Service4Ref, { once: true });
 
@@ -35,11 +39,11 @@ export default function Servicios() {
   const Service6Ref = useRef(null);
   const isInViewService6Ref = useInView(Service6Ref, { once: true });
 
-  const Service7Ref = useRef(null);
-  const isInViewService7Ref = useInView(Service7Ref, { once: true });
+  // const Service7Ref = useRef(null);
+  // const isInViewService7Ref = useInView(Service7Ref, { once: true });
 
-  const Service8Ref = useRef(null);
-  const isInViewService8Ref = useInView(Service8Ref, { once: true });
+  // const Service8Ref = useRef(null);
+  // const isInViewService8Ref = useInView(Service8Ref, { once: true });
 
   return (
     <main className="w-full">
@@ -79,10 +83,11 @@ export default function Servicios() {
           los espacios.
         </p>
         <p className="px-2 text-[#ABABAB]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-          molestiae minima dolores hic odit distinctio quis exercitationem modi
-          illo soluta fugit impedit sapiente eius molestias culpa non voluptatum
-          ad assumenda.
+          Como profesionales de la Arquitectura realizamos diferentes tareas,
+          podemos ayudarte a diseñar, planificar y construir tu inmueble.
+          También asesorarte sobre regularizaciones municipales, patologías o
+          fallas constructivas en los edificios y hasta desarrollar un plan
+          urbano. Estos son los servicios que ofrecemos:
         </p>
       </section>
       <div
@@ -96,14 +101,11 @@ export default function Servicios() {
         }}
         className="px-4 pb-28 flex flex-col gap-2 w-full"
       >
-        <p className="text-2xl font-bold">Relevamiento</p>
+        <p className="text-2xl font-bold">Relevamiento y Regularización</p>
         <p>
-          Implica la actualización de la información técnica de un bien inmueble
-          para su presentación en ente municipal. El procedimiento consta de la
-          medición del sitio, su posterior digitalización y los trámites
-          municipales correspondientes. Permite dejar en regla su edificación
-          ante organismos municipales evitando multas, mejora el precio del
-          valor del m2 construido.
+          Actualiza la planimetría declarada de tu bien inmueble, permitiendo
+          dejar en regla tu edificación ante organismos municipales evitando
+          multas y mejorando el precio del valor del m2 construido.
         </p>
       </div>
       <div
@@ -117,12 +119,11 @@ export default function Servicios() {
       >
         <p className="text-2xl font-bold">Asesoramiento</p>
         <p>
-          Corresponde a un asesoramiento técnico de una cuestión puntual que
-          requiera conocimiento específico técnico propio. Puede incluir
-          asesoramiento en la elección del sitio, conceptos de diseño,
-          consideraciones de sostenibilidad, reglamentaciones locales, y también
-          ser un recurso para resolver preguntas y problemas durante la
-          construcción. Consta de una consulta y la elaboración de un informe.
+          Resolvemos situaciones puntuales que requieran un conocimiento técnico
+          específico como ser la elección de un lote, conocer las
+          reglamentaciones locales, identificar problemas constructivos y sus
+          posibles soluciones. También puede ser útil para resolver preguntas y
+          problemas durante la construcción.
         </p>
       </div>
       <div
@@ -138,12 +139,25 @@ export default function Servicios() {
       >
         <p className="text-2xl font-bold">Anteproyecto</p>
         <p>
-          El anteproyecto es la fase inicial donde se exploran ideas y se
-          definen las necesidades del cliente. Incluye la conceptualización de
-          la idea, análisis del sitio y posibles soluciones preliminares.
-          También puede abordar aspectos como la viabilidad del proyecto y las
-          restricciones legales y normativas.
+          Exploramos ideas y definimos las necesidades del cliente.
+          Conceptualizamos la idea y analizamos el sitio.
         </p>
+      </div>
+      <div
+        className="pb-28 flex flex-col gap-2 w-full"
+        ref={MidleImageref}
+        style={{
+          opacity: isInViewMidleImageRef ? 1 : 0,
+          transition: 'opacity 1s ease-out',
+          animation: `${isInViewMidleImageRef ? 'fadeIn' : 'none'} 1s ease-in`,
+        }}
+      >
+        <Image
+          src={ServicesMidleImg}
+          alt="Foto de planos para la seccion de servicios"
+          priority={true}
+          className="w-fill h-full"
+        />
       </div>
       <div
         ref={Service4Ref}
@@ -154,17 +168,16 @@ export default function Servicios() {
         }}
         className="px-4 pb-28 flex flex-col gap-2 w-full"
       >
-        <p className="text-2xl font-bold">Proyecto de obra nueva</p>
+        <p className="text-2xl font-bold">
+          Proyecto de obra nueva / Ampliación / Reforma
+        </p>
         <p>
-          Es la etapa donde, sobre la base del anteproyecto, se ejecuta la
-          documentación técnica que define con precisión el carácter de la obra
-          para permitir su construcción. El proyecto arquitectónico es la fase
-          donde se desarrollan los detalles y planos necesarios para la
-          construcción. Incluye la definición completa de la estructura,
-          distribución espacial, materiales, detalles constructivos y
-          especificaciones técnicas. Este documento sirve como guía para
-          contratistas y constructores. Incluye legajo de obra y presentaciones
-          municipales.
+          En base al anteproyecto, ejecutamos la documentación técnica que
+          define con precisión el carácter de la obra para permitir su
+          construcción. Desarrollamos detalles y planos necesarios para la
+          construcción, incluyendo la estructura, distribución espacial,
+          materiales, instalaciones, detalles constructivos y especificaciones
+          técnicas.
         </p>
       </div>
       <div
@@ -178,11 +191,11 @@ export default function Servicios() {
         }}
         className="px-4 pb-28 flex flex-col gap-2 w-full"
       >
-        <p className="text-2xl font-bold">Proyecto de ampliación</p>
+        <p className="text-2xl font-bold">Proyecto de Desarrollo Urbanístico</p>
         <p>
-          Se entiende como la proyección de toda construcción que signifique una
-          nueva superficie edificada, estructural y/o funcionalmente dependiente
-          de otra ya existente.
+          Planificamos un área dentro de un conglomerado poblacional o ciudad.
+          Definimos el desarrollo de loteos, mejoramiento de urbanizaciones, e
+          intervenimos creando espacios abiertos.
         </p>
       </div>
       <div
@@ -194,13 +207,14 @@ export default function Servicios() {
         }}
         className="px-4 pb-28 flex flex-col gap-2 w-full"
       >
-        <p className="text-2xl font-bold">Proyecto de reforma</p>
+        <p className="text-2xl font-bold">Interiorismo</p>
         <p>
-          Refiere a la proyección de la reforma de superficies existentes
-          edificadas.
+          Nos centramos en la estética y funcionalidad del espacio interior. En
+          interiores definimos las terminaciones, el mobiliario, la iluminación
+          y los detalles decorativos.
         </p>
       </div>
-      <div
+      {/* <div
         ref={Service7Ref}
         style={{
           opacity: isInViewService7Ref ? 1 : 0,
@@ -235,7 +249,7 @@ export default function Servicios() {
           espacio interior. Incluye la selección de terminaciones, mobiliario,
           iluminación y detalles decorativos.
         </p>
-      </div>
+      </div> */}
       <section className="w-full py-14 flex flex-col justify-center items-center text-center bg-[#F3F3F3]">
         <p className="text-3xl font-bold px-2">Tenes un proyecto en mente?</p>
         <Link

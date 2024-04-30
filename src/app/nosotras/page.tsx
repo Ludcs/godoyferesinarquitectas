@@ -82,16 +82,15 @@ export default function Nosotras() {
           {''}nuestro estudio
         </h1>
         <p className="text-2xl font-bold px-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-          molestiae minima dolores hic odit distinctio quis exercitationem modi
-          illo soluta fugit impedit sapiente eius molestias culpa non voluptatum
-          ad assumenda.
+          Colegas y amigas. Trabajamos en equipo desde hace años y en diferentes
+          experiencias académicas, sociales y laborales. Hemos logrado una forma
+          de trabajo operativa y resolutiva.
         </p>
         <p className="px-2 text-[#ABABAB]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-          molestiae minima dolores hic odit distinctio quis exercitationem modi
-          illo soluta fugit impedit sapiente eius molestias culpa non voluptatum
-          ad assumenda.
+          Nuestro compromiso es acompañar, asistir, escuchar y respetar los
+          deseos de nuestros clientes. También nos interesa el desarrollo
+          profesional por lo que seguimos formándonos, estudiando y abrazando
+          nuevos desafíos.
         </p>
       </section>
       <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start">
@@ -112,12 +111,17 @@ export default function Nosotras() {
             priority={true}
           />
           <h3 className="text-lg font-bold pt-4">Florencia FERESIN</h3>
-          <p className="text-[#ABABAB]">Arquitecta - CAPER 05456</p>
+          <p className="text-[#ABABAB]">Arquitecta</p>
           <article className="text-[#ABABAB] pt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit aliquam sit fuga aperiam, consequuntur totam, sint,
-            repudiandae consectetur nihil blanditiis architecto consequatur! Ad
-            necessitatibus accusantium porro cupiditate velit unde assumenda?
+            Arquitecta por la Universidad Nacional del Litoral, Santa Fe. Ha
+            participado en Cursos de Acción, Investigación y Desarrollo (CAI+D)
+            de UNL titulado “Observatorio Urbanístico del área metropolitana
+            Santa Fe-Paraná”. Investigadora becada en Programa de Cientibeca de
+            UNL, siendo autora del trabajo “Movilidad de personas con
+            discapacidad. La construcción de la inclusividad urbana en Santa Fe
+            - Paraná. Estrategias de diseño universal aplicables a diversos
+            espacios”. Además desarrolla su profesión en la Dirección de Diseño
+            Urbano y Arquitectónico de la Municipalidad de Paraná.
           </article>
         </div>
       </section>
@@ -139,12 +143,21 @@ export default function Nosotras() {
             priority={true}
           />
           <h3 className="text-lg font-bold pt-4">Fiorela GODOY</h3>
-          <p className="text-[#ABABAB]">Arquitecta - CAPER 05456</p>
+          <p className="text-[#ABABAB]">Arquitecta</p>
           <article className="text-[#ABABAB] pt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit aliquam sit fuga aperiam, consequuntur totam, sint,
-            repudiandae consectetur nihil blanditiis architecto consequatur! Ad
-            necessitatibus accusantium porro cupiditate velit unde assumenda?
+            Arquitecta por la Universidad Nacional del Litoral, Santa Fe,
+            Argentina. Ha participado en diferentes Cursos de Acción,
+            Investigación y Desarrollo (CAI+D) de UNL. En la actualidad integra
+            el equipo del CAI+D “Espacios innovativos para la educación técnica
+            no formal en la Ciudad de Santa Fe.” Es autora del trabajo “Paisajes
+            rurales como construcción cultural educativa: su influencia en la
+            configuración espacial de las Escuelas de Familia Agrícola de
+            Corrientes” (2016), y del artículo publicado en Revista Polis (2021)
+            “Bibliotecas populares para la construcción de sentidos.
+            Arquitectura móvil como posibilitante.” En 2023 realizó un seminario
+            de postgrado en Arquitectura para la educación dictado en FADU y
+            actualmente realiza pasantías docentes en la cátedra Taller vertical
+            raíces, Proyecto Arquitectónico 1 y 2 en Fadu, UNL.
           </article>
         </div>
       </section>
