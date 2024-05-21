@@ -83,11 +83,12 @@ export default function Servicios() {
           los espacios.
         </p>
         <p className="px-2 text-[#ABABAB]">
-          Como profesionales de la Arquitectura realizamos diferentes tareas,
-          podemos ayudarte a diseñar, planificar y construir tu inmueble.
-          También asesorarte sobre regularizaciones municipales, patologías o
-          fallas constructivas en los edificios y hasta desarrollar un plan
-          urbano. Estos son los servicios que ofrecemos:
+          Como profesionales de la Arquitectura realizamos diferentes tareas y
+          podemos ayudarte a diseñar, planificar y construir tu inmueble. Te
+          asesoramos sobre regularizaciones municipales, patologías o fallas
+          constructivas en los edificios y hasta desarrollar un plan urbano.
+          <br />
+          Estos son los servicios que ofrecemos:
         </p>
       </section>
       <div
