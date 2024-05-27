@@ -18,46 +18,48 @@ export default function Footer() {
         width={150}
         height={150}
       />
+      <div className="my-2 flex flex-col gap-2 md:w-full md:flex md:flex-row md:justify-start md:gap-12">
+        <div className="my-2 flex flex-col gap-2">
+          <p>- direccion:</p>
+          <Link
+            href={
+              'https://www.google.com/maps/place/Godoy+%2B+Feresin+Arquitectas/@-31.7267129,-60.4906119,15z/data=!4m6!3m5!1s0xa05bace33c5d16d7:0x9c0a3f0a6db31968!8m2!3d-31.7267129!4d-60.4906119!16s%2Fg%2F11vpy5p10w?entry=ttu'
+            }
+            target="_blank"
+            className="underline underline-offset-8 "
+          >
+            <p className="hover:text-gray-400 transition-all duration-200">
+              {'Blas Parera 2504, Parana (ARG)'}
+            </p>
+          </Link>
+        </div>
+        <div className=" my-2 flex flex-col gap-2">
+          <p>- telefono:</p>
+          <Link
+            href={'https://api.whatsapp.com/send?phone=5493435028431'}
+            target="_blank"
+            title="WhatsApp"
+            className="underline underline-offset-8"
+          >
+            <p className="hover:text-gray-400 transition-all duration-200">
+              {'343 5028431'}
+            </p>{' '}
+          </Link>
+        </div>
+        <div className=" my-2 flex flex-col gap-2">
+          <p>- email:</p>
+          <Link
+            href={gmailLink}
+            target="_blank"
+            className="underline underline-offset-8"
+          >
+            <p className="hover:text-gray-400 transition-all duration-200">
+              {emailAddress}
+            </p>
+          </Link>
+        </div>
+      </div>
 
-      <div className=" my-2 flex flex-col gap-2">
-        <p>- direccion:</p>
-        <Link
-          href={
-            'https://www.google.com/maps/place/Godoy+%2B+Feresin+Arquitectas/@-31.7267129,-60.4906119,15z/data=!4m6!3m5!1s0xa05bace33c5d16d7:0x9c0a3f0a6db31968!8m2!3d-31.7267129!4d-60.4906119!16s%2Fg%2F11vpy5p10w?entry=ttu'
-          }
-          target="_blank"
-          className="underline underline-offset-8 "
-        >
-          <p className="hover:text-gray-400 transition-all duration-200">
-            {'Blas Parera 2504, Parana (ARG)'}
-          </p>
-        </Link>
-      </div>
-      <div className=" my-2 flex flex-col gap-2">
-        <p>- telefono:</p>
-        <Link
-          href={'https://api.whatsapp.com/send?phone=5493435028431'}
-          target="_blank"
-          title="WhatsApp"
-          className="underline underline-offset-8"
-        >
-          <p className="hover:text-gray-400 transition-all duration-200">
-            {'343 5028431'}
-          </p>{' '}
-        </Link>
-      </div>
-      <div className=" my-2 flex flex-col gap-2">
-        <p>- email:</p>
-        <Link
-          href={gmailLink}
-          target="_blank"
-          className="underline underline-offset-8"
-        >
-          <p className="hover:text-gray-400 transition-all duration-200">
-            {emailAddress}
-          </p>
-        </Link>
-      </div>
       <div className=" my-2 flex justify-start items-center gap-7">
         <Link
           href={
@@ -82,7 +84,7 @@ export default function Footer() {
         </Link>
       </div>
       <div className="mt-2 mb-3">
-        <p className="text-xs font-normal">
+        <p className="text-xs font-normal md:text-sm">
           ® 2023 - G<span className="italic">+</span>F{' '}
           <span className="italic">arquitectas</span>
         </p>

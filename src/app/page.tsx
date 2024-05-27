@@ -44,7 +44,7 @@ export default function Home() {
           {''}somos un estudio de arquitectura independiente que proyecta y
           materializa ideas.
         </h1>
-        <p className="text-md py-5 font-bold px-2">
+        <p className="text-md py-5 font-bold px-2 md:text-justify  md:font-normal md:text-lg">
           Trabajamos estrechamente con nuestros clientes para atender y resolver
           sus necesidades, expectativas y deseos. Brindamos un servicio
           profesional y humano, en compromiso con nuestra sociedad, y
@@ -74,11 +74,11 @@ export default function Home() {
           href={'/nosotras'}
           className="w-full py-2 flex justify-center items-center gap-4 text-lg hover:bg-primary hover:text-white transition-all duration-200"
         >
-          <p>Quienes somos?</p>
+          <p className="md:text-2xl md:font-semiboldbold">Quienes somos?</p>
           <FaArrowRight size={30} />
         </Link>
       </div>
-      <section className="w-full">
+      <section className="w-full  md:grid md:grid-cols-2">
         <div className="w-full py-28 bg-primary">
           <div
             ref={PhraseServicesref}
@@ -90,16 +90,20 @@ export default function Home() {
               } 1s ease-in`,
             }}
           >
-            <p className="text-3xl font-bold px-2">
+            <p className="text-3xl font-bold px-2 md:text-justify">
               “La casa es un refugio, no sólo del cuerpo, sino también de la
               mente de las personas”
             </p>
-            <p className="pt-10 px-2 italic lowercase">KAZUYO SEJIMA</p>
+            <p className="px-2 pt-2 italic md:text-xl md:font-thin">
+              -Kazuyo Sejima-
+            </p>
             <Link
               href={'/servicios'}
               className="w-full mt-10 py-2 flex justify-center items-center gap-4 text-lg hover:bg-white hover:text-primary transition-all duration-200"
             >
-              <p>Nuestros servicios</p>
+              <p className="md:text-2xl md:font-semiboldbold">
+                Nuestros servicios
+              </p>
               <FaArrowRight size={30} />
             </Link>
           </div>

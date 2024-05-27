@@ -87,14 +87,14 @@ export default function Nosotras() {
           experiencias académicas, sociales y laborales. Hemos logrado una forma
           de trabajo operativa y resolutiva.
         </p>
-        <p className="px-2 text-[#ABABAB]">
+        <p className="px-2 text-[#ABABAB] md:text-justify  md:font-normal md:text-lg">
           Nuestro compromiso es acompañar, asistir, escuchar y respetar los
           deseos de nuestros clientes. También nos interesa el desarrollo
           profesional por lo que seguimos formándonos, estudiando y abrazando
           nuevos desafíos.
         </p>
       </section>
-      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start">
+      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2">
         <div
           ref={FloImageref}
           style={{
@@ -104,16 +104,19 @@ export default function Nosotras() {
               isInViewFloImageRef ? 'fadeIn' : 'none'
             } 0.5s ease-in`,
           }}
+          className="md:col-span-1 md:h-full"
         >
           <Image
             src={Flo}
             alt="Florencia Feresin Arquitecta"
-            className="w-full object-cover"
+            className="w-full object-cover md:h-full"
             priority={true}
           />
-          <h3 className="text-lg font-bold pt-4">Florencia FERESIN</h3>
+        </div>
+        <div className="md:col-span-1">
+          <h3 className="text-lg font-bold pt-4 md:pt-0">Florencia FERESIN</h3>
           <p className="text-[#ABABAB]">Arquitecta</p>
-          <article className="text-[#ABABAB] pt-4">
+          <article className="text-[#ABABAB] pt-4 md:text-justify">
             Arquitecta por la Universidad Nacional del Litoral, Santa Fe. Ha
             participado en Cursos de Acción, Investigación y Desarrollo (CAI+D)
             de UNL titulado “Observatorio Urbanístico del área metropolitana
@@ -126,7 +129,7 @@ export default function Nosotras() {
           </article>
         </div>
       </section>
-      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start">
+      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2">
         <div
           ref={FioImageref}
           style={{
@@ -136,16 +139,19 @@ export default function Nosotras() {
               isInViewFioImageRef ? 'fadeIn' : 'none'
             } 0.5s ease-in`,
           }}
+          className="md:col-span-1 md:h-full"
         >
           <Image
             src={Fio}
             alt="Florencia Feresin Arquitecta"
-            className="w-full object-cover"
+            className="w-full object-cover md:h-full"
             priority={true}
           />
-          <h3 className="text-lg font-bold pt-4">Fiorela GODOY</h3>
+        </div>
+        <div>
+          <h3 className="text-lg font-bold pt-4 md:pt-0">Fiorela GODOY</h3>
           <p className="text-[#ABABAB]">Arquitecta</p>
-          <article className="text-[#ABABAB] pt-4">
+          <article className="text-[#ABABAB] pt-4 md:text-justify">
             Arquitecta por la Universidad Nacional del Litoral, Santa Fe,
             Argentina. Ha participado en diferentes Cursos de Acción,
             Investigación y Desarrollo (CAI+D) de UNL. En la actualidad integra
