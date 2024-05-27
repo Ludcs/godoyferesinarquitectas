@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa6';
+import ContactFooter from '@/components/ContactFooter';
 
 export default function Home() {
   const Sloganref = useRef(null);
@@ -93,10 +94,7 @@ export default function Home() {
               “La casa es un refugio, no sólo del cuerpo, sino también de la
               mente de las personas”
             </p>
-            <p className="pt-10 px-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-              sint placeat tempora, necessitatibus natus ad maxime.
-            </p>
+            <p className="pt-10 px-2 italic lowercase">KAZUYO SEJIMA</p>
             <Link
               href={'/servicios'}
               className="w-full mt-10 py-2 flex justify-center items-center gap-4 text-lg hover:bg-white hover:text-primary transition-all duration-200"
@@ -127,15 +125,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="w-full py-14 flex flex-col justify-center items-center text-center bg-[#F3F3F3]">
-        <p className="text-3xl font-bold px-2">Tenes un proyecto en mente?</p>
-        <Link
-          href={'/contacto'}
-          className="mt-10 mb-10 text-lg px-5 py-2 border border-solid border-black hover:bg-black hover:text-white transition-all duration-200"
-        >
-          Contactanos
-        </Link>
-      </section>
+      <ContactFooter />
     </main>
   );
 }

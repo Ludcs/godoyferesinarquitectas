@@ -11,6 +11,7 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Timeline from '@/components/Timeline';
 import ScrollToTop from '@/components/ScrollToTop';
+import ContactFooter from '@/components/ContactFooter';
 
 export default function Nosotras() {
   const TopImageref = useRef(null);
@@ -178,16 +179,7 @@ export default function Nosotras() {
           <Timeline />
         </div>
       </div>
-
-      <section className="w-full py-14 flex flex-col justify-center items-center text-center bg-[#F3F3F3]">
-        <p className="text-3xl font-bold px-2">Tenes un proyecto en mente?</p>
-        <Link
-          href={'/contacto'}
-          className="mt-10 mb-10 text-lg px-5 py-2 border border-solid border-black hover:bg-black hover:text-white transition-all duration-200"
-        >
-          Contactanos
-        </Link>
-      </section>
+      <ContactFooter />
     </main>
   );
 }

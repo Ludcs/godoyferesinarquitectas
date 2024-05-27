@@ -4,12 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import TresDuplexPrev from '../../../public/assets/images/proyectos/tresDuplex/04-Tres-duplex.jpg';
 import CasaTavoPrev from '../../../public/assets/images/proyectos/casaTavo/01-Tavo.jpg';
+import ContactFooter from '@/components/ContactFooter';
 
 export default function Proyectos() {
   return (
     <main className="w-full">
       <Header />
       <ScrollToTop />
+
       <section className="w-full px-2 py-12 flex flex-col gap-2">
         <div className="bg-red-200 w-full h-80 relative">
           <Link href={'/proyectos/tresDuplex'}>
@@ -56,6 +58,7 @@ export default function Proyectos() {
           </Link>
         </div>
       </section>
+      <ContactFooter />
     </main>
   );
 }

@@ -11,6 +11,7 @@ import TresDuplex6 from '../../../../public/assets/images/proyectos/tresDuplex/0
 import TresDuplex7 from '../../../../public/assets/images/proyectos/tresDuplex/07-Tres-duplex.jpg';
 import TresDuplex8 from '../../../../public/assets/images/proyectos/tresDuplex/08-Tres-duplex.jpg';
 import TresDuplex9 from '../../../../public/assets/images/proyectos/tresDuplex/09-Tres-duplex.jpg';
+import ContactFooter from '@/components/ContactFooter';
 
 export default function TresDuplex() {
   return (
@@ -47,14 +48,16 @@ export default function TresDuplex() {
               <br />
               Las búsquedas morfológicas y estéticas consideran las
               pre-existencias (vivienda y local comercial, entorno) y procuran
-              narrar su función sin imponerse sobre el resto del conjunto. Cada
-              vivienda resuelve en planta baja áreas sociales y de servicio:
-              estar, cocina-comedor, lavadero, baño tipo toilette y patio con
-              parrilla; y en planta alta: baño completo y dos dormitorios con
-              balcones. El dormitorio que mira al Norte, es decir al contra
-              frente, puede ser utilizado como taller- estudio o bien como
-              cuarto secundario, lo que ha sido considerado en el diseño de la
-              instalación eléctrica a fin de potenciar esta flexibilidad de uso.
+              narrar su función sin imponerse sobre el resto del conjunto.
+              <br />
+              Cada vivienda resuelve en planta baja áreas sociales y de
+              servicio: estar, cocina-comedor, lavadero, baño tipo toilette y
+              patio con parrilla; y en planta alta: baño completo y dos
+              dormitorios con balcones. El dormitorio que mira al Norte, es
+              decir al contra frente, puede ser utilizado como taller- estudio o
+              bien como cuarto secundario, lo que ha sido considerado en el
+              diseño de la instalación eléctrica a fin de potenciar esta
+              flexibilidad de uso.
             </p>
           </div>
         </article>
@@ -102,15 +105,7 @@ export default function TresDuplex() {
           className="pb-4"
         />
       </section>
-      <section className="w-full py-14 flex flex-col justify-center items-center text-center bg-[#F3F3F3]">
-        <p className="text-3xl font-bold px-2">Tenes un proyecto en mente?</p>
-        <Link
-          href={'/contacto'}
-          className="mt-10 mb-10 text-lg px-5 py-2 border border-solid border-black hover:bg-black hover:text-white transition-all duration-200"
-        >
-          Contactanos
-        </Link>
-      </section>
+      <ContactFooter />
     </main>
   );
 }
