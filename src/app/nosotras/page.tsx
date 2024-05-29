@@ -94,7 +94,7 @@ export default function Nosotras() {
           nuevos desafíos.
         </p>
       </section>
-      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2">
+      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2 md:gap-4">
         <div
           ref={FloImageref}
           style={{
@@ -116,7 +116,7 @@ export default function Nosotras() {
         <div className="md:col-span-1">
           <h3 className="text-lg font-bold pt-4 md:pt-0">Florencia FERESIN</h3>
           <p className="text-[#ABABAB]">Arquitecta</p>
-          <article className="text-[#ABABAB] pt-4 md:text-justify">
+          <article className="text-[#ABABAB] pt-4 md:leading-relaxed">
             Arquitecta por la Universidad Nacional del Litoral, Santa Fe. Ha
             participado en Cursos de Acción, Investigación y Desarrollo (CAI+D)
             de UNL titulado “Observatorio Urbanístico del área metropolitana
@@ -129,7 +129,7 @@ export default function Nosotras() {
           </article>
         </div>
       </section>
-      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2">
+      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2 md:gap-4">
         <div
           ref={FioImageref}
           style={{
@@ -151,7 +151,7 @@ export default function Nosotras() {
         <div>
           <h3 className="text-lg font-bold pt-4 md:pt-0">Fiorela GODOY</h3>
           <p className="text-[#ABABAB]">Arquitecta</p>
-          <article className="text-[#ABABAB] pt-4 md:text-justify">
+          <article className="text-[#ABABAB] pt-4 md:leading-relaxed">
             Arquitecta por la Universidad Nacional del Litoral, Santa Fe,
             Argentina. Ha participado en diferentes Cursos de Acción,
             Investigación y Desarrollo (CAI+D) de UNL. En la actualidad integra

@@ -25,8 +25,8 @@ export default function TresDuplex() {
           priority={true}
         />
       </section>
-      <section className="w-full px-2 pt-12 flex flex-col">
-        <div className="w-full underline text-[#ABABAB] pb-6">
+      <section className="w-full px-2 pt-12 flex flex-col md:text-lg">
+        <div className="w-full underline text-[#ABABAB] pb-6 ">
           <Link href={'/proyectos'}>Volver</Link>
         </div>
         <article>
@@ -39,7 +39,7 @@ export default function TresDuplex() {
             <p>Año 2023.</p>
           </div>
           <div>
-            <p className="text-justify leading-relaxed">
+            <p className="text-justify leading-relaxed ">
               A partir del relevamiento de la construcción existente, se
               plantean tres unidades funcionales en formato “dúplex”. Las mismas
               se ubican en el fondo del terreno y tienen entrada independiente

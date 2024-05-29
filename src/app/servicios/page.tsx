@@ -83,12 +83,12 @@ export default function Servicios() {
           creativos. Te asesoramos en el proceso y trabajamos de manera conjunta
           los espacios.
         </p>
-        <p className="px-2 text-[#ABABAB]">
+        <p className="px-2 text-[#ABABAB] md:font-normal md:text-lg">
           Como profesionales de la Arquitectura realizamos diferentes tareas y
           podemos ayudarte a diseñar, planificar y construir tu inmueble. Te
           asesoramos sobre regularizaciones municipales, patologías o fallas
           constructivas en los edificios y hasta desarrollar un plan urbano.
-          <br />
+          <br className="md:hidden" />
           Estos son los servicios que ofrecemos:
         </p>
       </section>
@@ -101,10 +101,10 @@ export default function Servicios() {
             isInViewService1Ref ? 'fadeInRight' : 'none'
           } 1s ease-in`,
         }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full"
+        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
       >
         <p className="text-2xl font-bold">Relevamiento y Regularización</p>
-        <p>
+        <p className="md:text-lg">
           Actualiza la planimetría declarada de tu bien inmueble, permitiendo
           dejar en regla tu edificación ante organismos municipales evitando
           multas y mejorando el precio del valor del m2 construido.
@@ -117,10 +117,10 @@ export default function Servicios() {
           opacity: isInViewService2Ref ? 1 : 0,
           transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
         }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full"
+        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
       >
         <p className="text-2xl font-bold">Asesoramiento</p>
-        <p>
+        <p className="md:text-lg">
           Resolvemos situaciones puntuales que requieran un conocimiento técnico
           específico como ser la elección de un lote, conocer las
           reglamentaciones locales, identificar problemas constructivos y sus
@@ -137,16 +137,16 @@ export default function Servicios() {
             isInViewService3Ref ? 'fadeInRight' : 'none'
           } 1s ease-in`,
         }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full"
+        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
       >
         <p className="text-2xl font-bold">Anteproyecto</p>
-        <p>
+        <p className="md:text-lg">
           Exploramos ideas y definimos las necesidades del cliente.
           Conceptualizamos la idea y analizamos el sitio.
         </p>
       </div>
       <div
-        className="pb-28 flex flex-col gap-2 w-full"
+        className="pb-28 flex flex-col gap-2 w-full md:pb-14"
         ref={MidleImageref}
         style={{
           opacity: isInViewMidleImageRef ? 1 : 0,
@@ -168,12 +168,12 @@ export default function Servicios() {
           opacity: isInViewService4Ref ? 1 : 0,
           transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
         }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full"
+        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
       >
         <p className="text-2xl font-bold">
           Proyecto de obra nueva / Ampliación / Reforma
         </p>
-        <p>
+        <p className="md:text-lg">
           En base al anteproyecto, ejecutamos la documentación técnica que
           define con precisión el carácter de la obra para permitir su
           construcción. Desarrollamos detalles y planos necesarios para la
@@ -191,10 +191,10 @@ export default function Servicios() {
             isInViewService5Ref ? 'fadeInRight' : 'none'
           } 1s ease-in`,
         }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full"
+        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
       >
         <p className="text-2xl font-bold">Proyecto de Desarrollo Urbanístico</p>
-        <p>
+        <p className="md:text-lg">
           Planificamos un área dentro de un conglomerado poblacional o ciudad.
           Definimos el desarrollo de loteos, mejoramiento de urbanizaciones, e
           intervenimos creando espacios abiertos.
@@ -210,7 +210,7 @@ export default function Servicios() {
         className="px-4 pb-28 flex flex-col gap-2 w-full"
       >
         <p className="text-2xl font-bold">Interiorismo</p>
-        <p>
+        <p className="md:text-lg">
           Nos centramos en la estética y funcionalidad del espacio interior. En
           interiores definimos las terminaciones, el mobiliario, la iluminación
           y los detalles decorativos.

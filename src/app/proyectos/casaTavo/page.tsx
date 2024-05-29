@@ -33,7 +33,7 @@ export default function CasaTavo() {
           priority={true}
         />
       </section>
-      <section className="w-full px-2 pt-12 flex flex-col">
+      <section className="w-full px-2 pt-12 flex flex-col md:text-lg">
         <div className="w-full underline text-[#ABABAB] pb-6">
           <Link href={'/proyectos'}>Volver</Link>
         </div>
@@ -45,7 +45,7 @@ export default function CasaTavo() {
           <div className="pb-6 text-[#ABABAB]">
             <p>Paraná, Entre Ríos, Argentina.</p>
             <p>Año 2021 - 2022.</p>
-            <br />
+            <br className="md:hidden" />
             <p>
               1° etapa: Arq. Godoy Fiorella, Arq. Galli Marianela y Arq. Feresin
               Florencia

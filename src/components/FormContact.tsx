@@ -39,27 +39,29 @@ export default function FormContact() {
 
   return (
     <form
+      className="w-full flex flex-col gap-4 px-2 pb-7"
       ref={formRef}
       onSubmit={sendEmail}
-      className="w-full flex flex-col gap-4 px-2 pb-7"
     >
-      <input
-        type="text"
-        placeholder="Nombre y Apellido"
-        name="user_name"
-        required
-        className="p-2  border-b border-black outline-none"
-        autoComplete="off"
-      />
+      <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-4">
+        <input
+          type="text"
+          placeholder="Nombre y Apellido"
+          name="user_name"
+          required
+          className="p-2  border-b border-black outline-none"
+          autoComplete="off"
+        />
 
-      <input
-        type="email"
-        placeholder="Email"
-        name="user_email"
-        required
-        className="p-2  border-b border-black outline-none"
-        autoComplete="off"
-      />
+        <input
+          type="email"
+          placeholder="Email"
+          name="user_email"
+          required
+          className="p-2  border-b border-black outline-none"
+          autoComplete="off"
+        />
+      </div>
 
       <textarea
         placeholder="Escribinos tu consulta..."
@@ -73,7 +75,7 @@ export default function FormContact() {
 
       <button
         type="submit"
-        className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200"
+        className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200 md:w-1/2"
       >
         {loading ? 'Enviando...' : 'Enviar'}
       </button>

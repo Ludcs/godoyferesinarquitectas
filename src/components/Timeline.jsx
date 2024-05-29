@@ -3,7 +3,7 @@ export default function Timeline() {
     <ol className="relative border-s border-gray-200 dark:border-black">
       <li className="mb-10 ms-4">
         <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5  border border-white dark:border-black dark:bg-black"></div>
-        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black">
+        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black md:text-lg">
           2023 - Mención honorífica - Concurso Provincial de anteproyectos sede
           CoPAER e ideas para su emplazamiento.
         </time>
@@ -18,7 +18,7 @@ export default function Timeline() {
       </li>
       <li className="mb-10 ms-4">
         <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-black dark:bg-black"></div>
-        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black">
+        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black md:text-lg">
           2021 - 2do Premio - Concurso Monumento en recordación de las víctimas
           del Holocausto Nazi.
         </time>
@@ -32,7 +32,7 @@ export default function Timeline() {
       </li>
       <li className="mb-10 ms-4">
         <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-black dark:bg-black"></div>
-        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black">
+        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black md:text-lg">
           2017 - Mención - “XXI Encuentro de Jóvenes Investigadores de
           Universidad Nacional del Litoral”.
         </time>
@@ -48,7 +48,7 @@ export default function Timeline() {
       </li>
       <li className="ms-4">
         <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-black dark:bg-black"></div>
-        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black">
+        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black md:text-lg">
           April 2022
         </time>
         {/* <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
