@@ -1,7 +1,11 @@
+'use client';
+import '@/app/home.css';
 import Header from '@/components/Header';
 import ScrollToTop from '@/components/ScrollToTop';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 import TresDuplexPrev from '../../../../public/assets/images/proyectos/tresDuplex/04-Tres-duplex.jpg';
 import TresDuplex1 from '../../../../public/assets/images/proyectos/tresDuplex/01-Tres-duplex.jpg';
 import TresDuplex2 from '../../../../public/assets/images/proyectos/tresDuplex/02-Tres-duplex.jpg';
@@ -14,18 +18,43 @@ import TresDuplex9 from '../../../../public/assets/images/proyectos/tresDuplex/0
 import ContactFooter from '@/components/ContactFooter';
 
 export default function TresDuplex() {
+  const TopImageTresDuplexref = useRef(null);
+  const isInViewTopImageTresDuplexref = useInView(TopImageTresDuplexref, {
+    once: true,
+  });
+
+  const Descriptionref = useRef(null);
+  const isInViewDescriptionref = useInView(Descriptionref, { once: true });
+
   return (
     <main className="w-full">
       <Header />
       <ScrollToTop />
-      <section>
+      <section
+        ref={TopImageTresDuplexref}
+        style={{
+          opacity: isInViewTopImageTresDuplexref ? 1 : 0,
+          transition: 'opacity 1s ease-out',
+          animation: `${
+            isInViewTopImageTresDuplexref ? 'fadeIn' : 'none'
+          } 0.5s ease-in`,
+        }}
+      >
         <Image
           src={TresDuplexPrev}
           alt="Header Image Proyecto Tres Duplex"
-          priority={true}
+          className="w-full h-auto"
         />
       </section>
-      <section className="w-full px-2 pt-12 flex flex-col md:text-lg">
+      <section
+        className="w-full px-2 pt-12 flex flex-col md:text-lg lg:px-4"
+        ref={Descriptionref}
+        style={{
+          transform: isInViewDescriptionref ? 'none' : 'translateX(-200px)',
+          opacity: isInViewDescriptionref ? 1 : 0,
+          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+        }}
+      >
         <div className="w-full underline text-[#ABABAB] pb-6 ">
           <Link href={'/proyectos'}>Volver</Link>
         </div>
@@ -62,41 +91,41 @@ export default function TresDuplex() {
           </div>
         </article>
       </section>
-      <section className="w-full flex flex-col gap-4 pt-12">
+      <section className="w-full flex flex-col gap-4 pt-12 lg:gap-6">
         <Image
           src={TresDuplex1}
           alt="Imagen 1 Proyecto Tres Duplex GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={TresDuplex2}
           alt="Imagen 2 Proyecto Tres Duplex GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={TresDuplex3}
           alt="Imagen 3 Proyecto Tres Duplex GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={TresDuplex5}
           alt="Imagen 5 Proyecto Tres Duplex GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={TresDuplex6}
           alt="Imagen 6 Proyecto Tres Duplex GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={TresDuplex7}
           alt="Imagen 7 Proyecto Tres Duplex GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={TresDuplex8}
           alt="Imagen 8 Proyecto Tres Duplex GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={TresDuplex9}

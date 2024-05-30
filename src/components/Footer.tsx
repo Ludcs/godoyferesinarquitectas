@@ -11,12 +11,11 @@ export default function Footer() {
   // const mailtoLink = `mailto:${emailAddress}`;
 
   return (
-    <main className=" px-2 pt-8 pb-2 flex flex-col items-start justify-center font-semibold bg-[#161616] text-white gap-5 xl:px-12 2xl:px-32">
+    <main className=" px-2 pt-8 pb-2 flex flex-col items-start justify-center font-semibold bg-[#161616] text-white gap-5 lg:px-4 xl:px-12 2xl:px-32">
       <Image
         src={LogoFooter}
         alt="Logo Godoy + Feresin Arquitectas - Pie de pagina"
-        width={150}
-        height={150}
+        className="w-36 h-auto"
       />
       <div className="my-2 flex flex-col gap-2 md:w-full md:flex md:flex-row md:justify-start md:gap-12">
         <div className="my-2 flex flex-col gap-2">

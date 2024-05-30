@@ -1,7 +1,6 @@
 'use client';
-
 import '../../app/home.css';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useInView } from 'framer-motion';
 
 import Header from '@/components/Header';
@@ -13,6 +12,19 @@ import Link from 'next/link';
 import ContactFooter from '@/components/ContactFooter';
 
 export default function Servicios() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const handleMediaChange = () => setIsDesktop(mediaQuery.matches);
+
+    handleMediaChange(); // Check initial value
+
+    mediaQuery.addEventListener('change', handleMediaChange); // Add listener for future changes
+
+    return () => mediaQuery.removeEventListener('change', handleMediaChange); // Cleanup listener on unmount
+  }, []);
+
   const TopImageref = useRef(null);
   const isInViewTopImageRef = useInView(TopImageref, { once: true });
 
@@ -61,12 +73,12 @@ export default function Servicios() {
         <Image
           src={ServicesTopImg}
           alt="Imagen del equipo Godoy Feresin Arquitectas"
+          className="w-full h-auto"
           priority={true}
-          className="w-full object-cover"
         />
       </div>
       <section
-        className="py-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start"
+        className="py-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start lg:px-4"
         ref={ServiceRef}
         style={{
           transform: isInViewServiceRef ? 'none' : 'translateX(-200px)',
@@ -92,42 +104,48 @@ export default function Servicios() {
           Estos son los servicios que ofrecemos:
         </p>
       </section>
-      <div
-        ref={Service1Ref}
-        style={{
-          opacity: isInViewService1Ref ? 1 : 0,
-          transition: 'all 1s ease',
-          animation: `${
-            isInViewService1Ref ? 'fadeInRight' : 'none'
-          } 1s ease-in`,
-        }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
-      >
-        <p className="text-2xl font-bold">Relevamiento y Regularización</p>
-        <p className="md:text-lg">
-          Actualiza la planimetría declarada de tu bien inmueble, permitiendo
-          dejar en regla tu edificación ante organismos municipales evitando
-          multas y mejorando el precio del valor del m2 construido.
-        </p>
+      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 h-auto lg:px-4 lg:text-justify">
+        <div
+          ref={Service1Ref}
+          style={{
+            opacity: isInViewService1Ref ? 1 : 0,
+            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
+            animation: isDesktop
+              ? 'fadeIn'
+              : `${isInViewService1Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
+          }}
+          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
+        >
+          <p className="text-2xl font-bold">Relevamiento y Regularización</p>
+          <p className="md:text-lg">
+            Actualiza la planimetría declarada de tu bien inmueble, permitiendo
+            dejar en regla tu edificación ante organismos municipales evitando
+            multas y mejorando el precio del valor del m2 construido.
+          </p>
+        </div>
+        <div
+          ref={Service2Ref}
+          style={{
+            opacity: isInViewService2Ref ? 1 : 0,
+            transition: isDesktop
+              ? 'opacity 1s ease-out'
+              : 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            transform: isInViewService2Ref ? 'none' : 'translateX(-200px)',
+            animation: isDesktop ? 'fadeIn' : 'none',
+          }}
+          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
+        >
+          <p className="text-2xl font-bold">Asesoramiento</p>
+          <p className="md:text-lg">
+            Resolvemos situaciones puntuales que requieran un conocimiento
+            técnico específico como ser la elección de un lote, conocer las
+            reglamentaciones locales, identificar problemas constructivos y sus
+            posibles soluciones. También puede ser útil para resolver preguntas
+            y problemas durante la construcción.
+          </p>
+        </div>
       </div>
-      <div
-        ref={Service2Ref}
-        style={{
-          transform: isInViewService2Ref ? 'none' : 'translateX(-200px)',
-          opacity: isInViewService2Ref ? 1 : 0,
-          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
-      >
-        <p className="text-2xl font-bold">Asesoramiento</p>
-        <p className="md:text-lg">
-          Resolvemos situaciones puntuales que requieran un conocimiento técnico
-          específico como ser la elección de un lote, conocer las
-          reglamentaciones locales, identificar problemas constructivos y sus
-          posibles soluciones. También puede ser útil para resolver preguntas y
-          problemas durante la construcción.
-        </p>
-      </div>
+      {/* TODO: continuar grid y animaciones como en services 1 y 2  */}
       <div
         ref={Service3Ref}
         style={{

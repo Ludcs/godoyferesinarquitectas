@@ -12,14 +12,13 @@ export default function Proyectos() {
       <Header />
       <ScrollToTop />
 
-      <section className="w-full px-2 py-12 flex flex-col gap-2">
-        <div className="bg-red-200 w-full h-80 relative">
+      <section className="w-full px-2 py-12 flex flex-col gap-2 md:gap-4 lg:px-4 lg:gap-6">
+        <div className="h-auto relative">
           <Link href={'/proyectos/tresDuplex'}>
             <Image
               src={TresDuplexPrev}
               alt="Preview Proyecto Tres Duplex"
-              className="w-fill h-full brightness-50 transition-all duration-200 ease-in hover:brightness-100"
-              priority={true}
+              className="w-full h-auto brightness-50 transition-all duration-200 ease-in hover:brightness-100"
             />
             <div className="pl-2 pb-2 text-white absolute z-[2] bottom-0 left-0">
               <h2 className="text-white font-bold text-2xl">Tres Duplex</h2>
@@ -27,13 +26,12 @@ export default function Proyectos() {
             </div>
           </Link>
         </div>
-        <div className="bg-red-200 h-80 relative">
+        <div className="h-auto relative">
           <Link href={'/proyectos/casaTavo'}>
             <Image
               src={CasaTavoPrev}
               alt="Preview Proyecto Casa Tavo"
-              className="w-fill h-full brightness-50 transition-all duration-200 ease-in hover:brightness-100"
-              priority={true}
+              className="w-full h-auto brightness-50 transition-all duration-200 ease-in hover:brightness-100"
             />
             <div className="pl-2 pb-2 text-white absolute z-[2] bottom-0 left-0">
               <h2 className="text-white font-bold text-2xl">La Soñada</h2>
@@ -41,13 +39,12 @@ export default function Proyectos() {
             </div>
           </Link>
         </div>
-        <div className="bg-red-200 h-80 relative">
+        <div className="h-auto relative">
           <Link href={'/proyectos/ampliacionLaura'}>
             <Image
               src={TresDuplexPrev}
               alt="Preview Proyecto Ampliación Laura"
-              className="w-fill h-full brightness-50 transition-all duration-200 ease-in hover:brightness-100"
-              priority={true}
+              className="w-full h-auto brightness-50 transition-all duration-200 ease-in hover:brightness-100"
             />
             <div className="pl-2 pb-2 text-white absolute z-[2] bottom-0 left-0">
               <h2 className="text-white font-bold text-2xl">

@@ -1,7 +1,11 @@
+'use client';
+import '@/app/home.css';
 import Header from '@/components/Header';
 import ScrollToTop from '@/components/ScrollToTop';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 import CasaTavoPrev from '../../../../public/assets/images/proyectos/casaTavo/01-Tavo.jpg';
 import CasaTavo1 from '../../../../public/assets/images/proyectos/casaTavo/02-Tavo.jpg';
 import CasaTavo2 from '../../../../public/assets/images/proyectos/casaTavo/03-Tavo.jpg';
@@ -22,18 +26,44 @@ import CasaTavo16 from '../../../../public/assets/images/proyectos/casaTavo/17-T
 import ContactFooter from '@/components/ContactFooter';
 
 export default function CasaTavo() {
+  const TopImageCasaTavoref = useRef(null);
+  const isInViewTopImageCasaTavoref = useInView(TopImageCasaTavoref, {
+    once: true,
+  });
+
+  const Descriptionref = useRef(null);
+  const isInViewDescriptionref = useInView(Descriptionref, { once: true });
+
   return (
     <main className="w-full">
       <Header />
       <ScrollToTop />
-      <section>
+      <section
+        ref={TopImageCasaTavoref}
+        style={{
+          opacity: isInViewTopImageCasaTavoref ? 1 : 0,
+          transition: 'opacity 1s ease-out',
+          animation: `${
+            isInViewTopImageCasaTavoref ? 'fadeIn' : 'none'
+          } 0.5s ease-in`,
+        }}
+      >
         <Image
           src={CasaTavoPrev}
           alt="Header Image Proyecto La Soñada"
+          className="w-full h-auto"
           priority={true}
         />
       </section>
-      <section className="w-full px-2 pt-12 flex flex-col md:text-lg">
+      <section
+        className="w-full px-2 pt-12 flex flex-col md:text-lg lg:px-4"
+        ref={Descriptionref}
+        style={{
+          transform: isInViewDescriptionref ? 'none' : 'translateX(-200px)',
+          opacity: isInViewDescriptionref ? 1 : 0,
+          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+        }}
+      >
         <div className="w-full underline text-[#ABABAB] pb-6">
           <Link href={'/proyectos'}>Volver</Link>
         </div>
@@ -73,91 +103,82 @@ export default function CasaTavo() {
         <Image
           src={CasaTavo1}
           alt="Imagen 1 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo2}
           alt="Imagen 2 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo3}
           alt="Imagen 3 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo4}
           alt="Imagen 5 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo5}
           alt="Imagen 6 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo6}
           alt="Imagen 7 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo7}
           alt="Imagen 8 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo8}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
-          className="pb-4"
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo9}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
-          className="pb-4"
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo10}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
-          className="pb-4"
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo11}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
-          className="pb-4"
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo12}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
-          className="pb-4"
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo13}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
-          className="pb-4"
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo14}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
-          className="pb-4"
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo15}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
-          className="pb-4"
+          className="w-full h-auto"
         />
         <Image
           src={CasaTavo16}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          priority={true}
-          className="pb-4"
+          className="w-full h-auto mb-4"
         />
       </section>
       <ContactFooter />

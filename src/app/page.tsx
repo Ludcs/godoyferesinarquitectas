@@ -123,9 +123,8 @@ export default function Home() {
           <Image
             src={ImageServices}
             alt="Imagen para la seccion de servicios"
+            className="w-full h-auto"
             priority={true}
-            width={500}
-            height={350}
           />
         </div>
       </section>
