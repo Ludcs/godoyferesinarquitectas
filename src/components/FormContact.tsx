@@ -72,14 +72,20 @@ export default function FormContact() {
         className="p-2  border-b border-black outline-none resize-none"
         autoComplete="off"
       ></textarea>
-
+      <div className="hidden lg:flex justify-center items-center">
+        <button
+          type="submit"
+          className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200 md:w-1/2 lg:text-xl lg:w-1/3"
+        >
+          {loading ? 'Enviando...' : 'Enviar'}
+        </button>
+      </div>
       <button
         type="submit"
-        className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200 md:w-1/2"
+        className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200 md:w-1/2 lg:text-xl lg:w-1/3 lg:hidden"
       >
         {loading ? 'Enviando...' : 'Enviar'}
       </button>
-
       {successMessage && (
         <span className="py-2 font-bold text-center text-green-500 text-lg">
           Tu consulta fue enviada!

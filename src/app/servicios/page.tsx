@@ -18,11 +18,11 @@ export default function Servicios() {
     const mediaQuery = window.matchMedia('(min-width: 1024px)');
     const handleMediaChange = () => setIsDesktop(mediaQuery.matches);
 
-    handleMediaChange(); // Check initial value
+    handleMediaChange();
 
-    mediaQuery.addEventListener('change', handleMediaChange); // Add listener for future changes
+    mediaQuery.addEventListener('change', handleMediaChange);
 
-    return () => mediaQuery.removeEventListener('change', handleMediaChange); // Cleanup listener on unmount
+    return () => mediaQuery.removeEventListener('change', handleMediaChange);
   }, []);
 
   const TopImageref = useRef(null);
@@ -104,7 +104,7 @@ export default function Servicios() {
           Estos son los servicios que ofrecemos:
         </p>
       </section>
-      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 h-auto lg:px-4 lg:text-justify">
+      <div className="flex flex-col gap-2 w-full h-auto lg:grid lg:grid-cols-2 lg:gap-8 lg:px-4 lg:text-justify">
         <div
           ref={Service1Ref}
           style={{
@@ -114,7 +114,7 @@ export default function Servicios() {
               ? 'fadeIn'
               : `${isInViewService1Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
           }}
-          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
+          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
           <p className="text-2xl font-bold">Relevamiento y Regularización</p>
           <p className="md:text-lg">
@@ -127,13 +127,13 @@ export default function Servicios() {
           ref={Service2Ref}
           style={{
             opacity: isInViewService2Ref ? 1 : 0,
+            transform: isInViewService2Ref ? 'none' : 'translateX(-200px)',
             transition: isDesktop
               ? 'opacity 1s ease-out'
               : 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-            transform: isInViewService2Ref ? 'none' : 'translateX(-200px)',
             animation: isDesktop ? 'fadeIn' : 'none',
           }}
-          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
+          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
           <p className="text-2xl font-bold">Asesoramiento</p>
           <p className="md:text-lg">
@@ -145,25 +145,26 @@ export default function Servicios() {
           </p>
         </div>
       </div>
-      {/* TODO: continuar grid y animaciones como en services 1 y 2  */}
-      <div
-        ref={Service3Ref}
-        style={{
-          opacity: isInViewService3Ref ? 1 : 0,
-          transition: 'all 1s ease',
-          animation: `${
-            isInViewService3Ref ? 'fadeInRight' : 'none'
-          } 1s ease-in`,
-        }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
-      >
-        <p className="text-2xl font-bold">Anteproyecto</p>
-        <p className="md:text-lg">
-          Exploramos ideas y definimos las necesidades del cliente.
-          Conceptualizamos la idea y analizamos el sitio.
-        </p>
-      </div>
-      <div
+
+      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto lg:px-4 lg:text-justify">
+        <div
+          ref={Service3Ref}
+          style={{
+            opacity: isInViewService3Ref ? 1 : 0,
+            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
+            animation: isDesktop
+              ? 'fadeIn'
+              : `${isInViewService3Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
+          }}
+          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
+        >
+          <p className="text-2xl font-bold">Anteproyecto</p>
+          <p className="md:text-lg">
+            Exploramos ideas y definimos las necesidades del cliente.
+            Conceptualizamos la idea y analizamos el sitio.
+          </p>
+        </div>
+        {/* <div
         className="pb-28 flex flex-col gap-2 w-full md:pb-14"
         ref={MidleImageref}
         style={{
@@ -178,61 +179,72 @@ export default function Servicios() {
           priority={true}
           className="w-fill h-full"
         />
+      </div> */}
+        <div
+          ref={Service4Ref}
+          style={{
+            opacity: isInViewService4Ref ? 1 : 0,
+            transform: isInViewService4Ref ? 'none' : 'translateX(-200px)',
+            transition: isDesktop
+              ? 'opacity 1s ease-out'
+              : 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            animation: isDesktop ? 'fadeIn' : 'none',
+          }}
+          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
+        >
+          <p className="text-2xl font-bold">
+            Proyecto de obra nueva / Ampliación / Reforma
+          </p>
+          <p className="md:text-lg">
+            En base al anteproyecto, ejecutamos la documentación técnica que
+            define con precisión el carácter de la obra para permitir su
+            construcción. Desarrollamos detalles y planos necesarios para la
+            construcción, incluyendo la estructura, distribución espacial,
+            materiales, instalaciones, detalles constructivos y especificaciones
+            técnicas.
+          </p>
+        </div>
       </div>
-      <div
-        ref={Service4Ref}
-        style={{
-          transform: isInViewService4Ref ? 'none' : 'translateX(-200px)',
-          opacity: isInViewService4Ref ? 1 : 0,
-          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
-      >
-        <p className="text-2xl font-bold">
-          Proyecto de obra nueva / Ampliación / Reforma
-        </p>
-        <p className="md:text-lg">
-          En base al anteproyecto, ejecutamos la documentación técnica que
-          define con precisión el carácter de la obra para permitir su
-          construcción. Desarrollamos detalles y planos necesarios para la
-          construcción, incluyendo la estructura, distribución espacial,
-          materiales, instalaciones, detalles constructivos y especificaciones
-          técnicas.
-        </p>
-      </div>
-      <div
-        ref={Service5Ref}
-        style={{
-          opacity: isInViewService5Ref ? 1 : 0,
-          transition: 'all 1s ease',
-          animation: `${
-            isInViewService5Ref ? 'fadeInRight' : 'none'
-          } 1s ease-in`,
-        }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14"
-      >
-        <p className="text-2xl font-bold">Proyecto de Desarrollo Urbanístico</p>
-        <p className="md:text-lg">
-          Planificamos un área dentro de un conglomerado poblacional o ciudad.
-          Definimos el desarrollo de loteos, mejoramiento de urbanizaciones, e
-          intervenimos creando espacios abiertos.
-        </p>
-      </div>
-      <div
-        ref={Service6Ref}
-        style={{
-          transform: isInViewService6Ref ? 'none' : 'translateX(-200px)',
-          opacity: isInViewService6Ref ? 1 : 0,
-          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full"
-      >
-        <p className="text-2xl font-bold">Interiorismo</p>
-        <p className="md:text-lg">
-          Nos centramos en la estética y funcionalidad del espacio interior. En
-          interiores definimos las terminaciones, el mobiliario, la iluminación
-          y los detalles decorativos.
-        </p>
+      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto lg:px-4 lg:text-justify">
+        <div
+          ref={Service5Ref}
+          style={{
+            opacity: isInViewService5Ref ? 1 : 0,
+            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
+            animation: isDesktop
+              ? 'fadeIn'
+              : `${isInViewService5Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
+          }}
+          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
+        >
+          <p className="text-2xl font-bold">
+            Proyecto de Desarrollo Urbanístico
+          </p>
+          <p className="md:text-lg">
+            Planificamos un área dentro de un conglomerado poblacional o ciudad.
+            Definimos el desarrollo de loteos, mejoramiento de urbanizaciones, e
+            intervenimos creando espacios abiertos.
+          </p>
+        </div>
+        <div
+          ref={Service6Ref}
+          style={{
+            opacity: isInViewService6Ref ? 1 : 0,
+            transform: isInViewService6Ref ? 'none' : 'translateX(-200px)',
+            transition: isDesktop
+              ? 'opacity 1s ease-out'
+              : 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            animation: isDesktop ? 'fadeIn' : 'none',
+          }}
+          className="px-4 pb-28 flex flex-col gap-2 w-full lg:px-0"
+        >
+          <p className="text-2xl font-bold">Interiorismo</p>
+          <p className="md:text-lg">
+            Nos centramos en la estética y funcionalidad del espacio interior.
+            En interiores definimos las terminaciones, el mobiliario, la
+            iluminación y los detalles decorativos.
+          </p>
+        </div>
       </div>
       {/* <div
         ref={Service7Ref}

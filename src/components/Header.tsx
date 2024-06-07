@@ -72,7 +72,7 @@ export default function Header() {
             onClick={() => setOpenSideBar(true)}
           />
         </div>
-        <nav className="hidden px-4 lg:flex flex-row items-center justify-center gap-8 list-none uppercase font-bold text-sm">
+        <nav className="hidden px-4 lg:flex flex-row items-center justify-center gap-8 list-none uppercase font-bold">
           <Link
             href={'/'}
             className={`${

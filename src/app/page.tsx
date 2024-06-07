@@ -7,23 +7,41 @@ import ScrollToTop from '@/components/ScrollToTop';
 import Team from '../../public/assets/images/juntas.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useInView } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa6';
 import ContactFooter from '@/components/ContactFooter';
 
 export default function Home() {
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    const handleMediaChange = () => setIsTablet(mediaQuery.matches);
+
+    handleMediaChange();
+
+    mediaQuery.addEventListener('change', handleMediaChange);
+
+    return () => mediaQuery.removeEventListener('change', handleMediaChange);
+  }, []);
+
   const Sloganref = useRef(null);
   const isInViewSlogan = useInView(Sloganref, { once: true });
 
   const TeamImageref = useRef(null);
   const isInViewTeamImage = useInView(TeamImageref, { once: true });
 
+  const PhraseServicesTabletRef = useRef(null);
+  const isInViewPhraseServicesTablet = useInView(PhraseServicesTabletRef, {
+    once: true,
+  });
+
   const PhraseServicesref = useRef(null);
-  const inInViewPhraseServices = useInView(PhraseServicesref, { once: true });
+  const isInViewPhraseServices = useInView(PhraseServicesref, { once: true });
 
   const ImageServicesref = useRef(null);
-  const inInViewImageServices = useInView(ImageServicesref, { once: true });
+  const isInViewImageServices = useInView(ImageServicesref, { once: true });
 
   return (
     <main className="w-full">
@@ -41,10 +59,12 @@ export default function Home() {
       >
         <h1 className="text-3xl font-bold px-2">
           <span className="text-5xl font-bold">_</span>
-          {''}somos un estudio de arquitectura independiente que proyecta y
-          materializa ideas.
+          desde nuestro estudio de arquitectura independiente proyectamos y
+          materializamos espacios.
+          {/* {''}estudio de arquitectura independiente que proyecta y materializa
+          ideas.  */}
         </h1>
-        <p className="text-md py-5 font-bold px-2 md:text-justify  md:font-normal md:text-lg">
+        <p className="text-justify text-md py-5 font-bold px-2 md:font-normal md:text-lg">
           Trabajamos estrechamente con nuestros clientes para atender y resolver
           sus necesidades, expectativas y deseos. Brindamos un servicio
           profesional y humano, en compromiso con nuestra sociedad, y
@@ -72,34 +92,52 @@ export default function Home() {
       <div className="w-full flex justify-center items-center py-28 bg-white">
         <Link
           href={'/nosotras'}
-          className="w-full py-2 flex justify-center items-center gap-4 text-lg hover:bg-primary hover:text-white transition-all duration-200"
+          className="w-full py-2 flex justify-center items-center gap-4 text-lg hover:bg-primary hover:text-white transition-all duration-200 lg:w-1/2"
         >
           <p className="md:text-2xl md:font-semiboldbold">Quienes somos?</p>
           <FaArrowRight size={30} />
         </Link>
       </div>
-      <section className="w-full  md:grid md:grid-cols-2">
-        <div className="w-full py-28 bg-primary">
+      <section className="w-full overflow-x-hidden md:grid md:grid-cols-2">
+        <div
+          ref={PhraseServicesTabletRef}
+          style={{
+            opacity: isInViewPhraseServicesTablet ? 1 : 0,
+            transform:
+              isTablet || isInViewPhraseServicesTablet
+                ? 'none'
+                : 'translateX(-100%)',
+            transition: isTablet ? 'all 1s ease' : 'none',
+            animation:
+              isTablet && isInViewPhraseServicesTablet
+                ? 'fadeInLeft 1s ease-in'
+                : 'none',
+          }}
+          className="w-full py-28 bg-primary lg:flex lg:flex-col lg:items-center lg:justify-center"
+        >
           <div
             ref={PhraseServicesref}
             style={{
-              opacity: inInViewPhraseServices ? 1 : 0,
+              opacity: isInViewPhraseServices ? 1 : 0,
               transition: 'opacity 1s ease-out',
-              animation: `${
-                inInViewPhraseServices ? 'fadeIn' : 'none'
-              } 1s ease-in`,
+              animation: isInViewPhraseServices ? 'fadeIn 1s ease-in' : 'none',
             }}
+            className={`${
+              isTablet
+                ? 'h-full flex flex-col justify-center items-center'
+                : 'none'
+            }`}
           >
-            <p className="text-3xl font-bold px-2 md:text-justify">
+            <p className="text-3xl font-bold px-2 text-center md:text-2xl lg:text-3xl lg:px-4">
               “La casa es un refugio, no sólo del cuerpo, sino también de la
               mente de las personas”
             </p>
-            <p className="px-2 pt-2 italic md:text-xl md:font-thin">
+            <p className="px-2 pt-2 italic text-center md:text-lg md:font-thin lg:text-lg lg:px-4">
               -Kazuyo Sejima-
             </p>
             <Link
               href={'/servicios'}
-              className="w-full mt-10 py-2 flex justify-center items-center gap-4 text-lg hover:bg-white hover:text-primary transition-all duration-200"
+              className="w-full mt-10 py-2 flex justify-center items-center gap-4 text-lg hover:bg-white hover:text-primary transition-all duration-200 lg:mt-14"
             >
               <p className="md:text-2xl md:font-semiboldbold">
                 Nuestros servicios
@@ -113,11 +151,12 @@ export default function Home() {
           className="w-full"
           ref={ImageServicesref}
           style={{
-            opacity: inInViewImageServices ? 1 : 0,
+            opacity: isInViewImageServices ? 1 : 0,
+            transform: isInViewImageServices ? 'none' : 'translateX(100%)',
             transition: 'all 1s ease',
-            animation: `${
-              inInViewImageServices ? 'fadeInRight' : 'none'
-            } 1s ease-in`,
+            animation: isInViewImageServices
+              ? 'fadeInRight 1s ease-in'
+              : 'none',
           }}
         >
           <Image

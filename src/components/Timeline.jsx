@@ -33,6 +33,22 @@ export default function Timeline() {
       <li className="mb-10 ms-4">
         <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-black dark:bg-black"></div>
         <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black md:text-lg">
+          2018 - Encuentro de Jovenes Investigadores de Universidad Nacional del
+          Litoral
+        </time>
+        {/* <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          Marketing UI design in Figma
+        </h3> */}
+        <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+          Trabajo “Movilidad de personas con diversidad funcional. La
+          construcción de la inclusividad urbana en el área metropolitana Santa
+          Fe Paraná”. <br /> Autora: Arq Florencia Feresin - Directora: Arq.
+          Mirta Soijet, Co-director: Arq. Gonzalo Corsetti.
+        </p>
+      </li>
+      <li className="mb-10 ms-4">
+        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-black dark:bg-black"></div>
+        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black md:text-lg">
           2017 - Mención - “XXI Encuentro de Jóvenes Investigadores de
           Universidad Nacional del Litoral”.
         </time>
@@ -43,20 +59,7 @@ export default function Timeline() {
           Trabajo “Paisajes rurales como construcción cultural educativa: su
           influencia en la configuración espacial de las escuelas de familia
           agrícola del Taragüí, Corrientes”. <br />
-          Autora: Arq. Fiorella Godoy- Directora: Esp. Arq. Falchini Alicia.
-        </p>
-      </li>
-      <li className="ms-4">
-        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-black dark:bg-black"></div>
-        <time className="mb-1 font-semibold leading-none text-gray-400 dark:text-black md:text-lg">
-          April 2022
-        </time>
-        {/* <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          E-Commerce UI code in Tailwind CSS
-        </h3> */}
-        <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-          Get started with dozens of web components and interactive elements
-          built on top of Tailwind CSS.
+          Autora: Arq. Fiorella Godoy - Directora: Esp. Arq. Falchini Alicia.
         </p>
       </li>
     </ol>
