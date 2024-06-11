@@ -11,7 +11,7 @@ export default function Footer() {
   // const mailtoLink = `mailto:${emailAddress}`;
 
   return (
-    <main className=" px-2 pt-8 pb-2 flex flex-col items-start justify-center font-semibold bg-[#161616] text-white gap-5 lg:px-4 xl:px-12 2xl:px-32">
+    <main className="px-2 pt-8 pb-2 flex flex-col items-start justify-center font-semibold bg-[#161616] text-white gap-5 lg:px-4 xl:px-12">
       <Image
         src={LogoFooter}
         alt="Logo Godoy + Feresin Arquitectas - Pie de pagina"
@@ -58,7 +58,6 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-
       <div className=" my-2 flex justify-start items-center gap-7">
         <Link
           href={
@@ -84,7 +83,7 @@ export default function Footer() {
       </div>
       <div className="mt-2 mb-3">
         <p className="text-xs font-normal md:text-sm">
-          ® 2023 - G<span className="italic">+</span>F{' '}
+          ® 2024 - G<span className="italic">+</span>F{' '}
           <span className="italic">arquitectas</span>
         </p>
       </div>

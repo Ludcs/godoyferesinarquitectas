@@ -70,12 +70,12 @@ export default function Nosotras() {
         />
       </div>
       <section
-        className="py-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start"
+        className="py-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start overflow-x-hidden"
         ref={OurStudyref}
         style={{
-          transform: isInViewOurStudyRef ? 'none' : 'translateX(-200px)',
           opacity: isInViewOurStudyRef ? 1 : 0,
-          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          transform: isInViewOurStudyRef ? 'none' : 'translateX(-100%)',
+          transition: 'all 1s ease',
         }}
       >
         <h1 className="text-3xl font-bold px-2">
@@ -94,18 +94,16 @@ export default function Nosotras() {
           nuevos desafíos.
         </p>
       </section>
-      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2 md:gap-4">
-        <div
-          ref={FloImageref}
-          style={{
-            opacity: isInViewFloImageRef ? 1 : 0,
-            transition: 'opacity 1s ease-out',
-            animation: `${
-              isInViewFloImageRef ? 'fadeIn' : 'none'
-            } 0.5s ease-in`,
-          }}
-          className="md:col-span-1 md:h-full"
-        >
+      <section
+        ref={FloImageref}
+        style={{
+          opacity: isInViewFloImageRef ? 1 : 0,
+          transition: 'opacity 1s ease-out',
+          animation: `${isInViewFloImageRef ? 'fadeIn' : 'none'} 0.5s ease-in`,
+        }}
+        className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2 md:gap-4"
+      >
+        <div className="md:col-span-1 md:h-full">
           <Image
             src={Flo}
             alt="Florencia Feresin Arquitecta"
@@ -129,18 +127,16 @@ export default function Nosotras() {
           </article>
         </div>
       </section>
-      <section className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2 md:gap-4">
-        <div
-          ref={FioImageref}
-          style={{
-            opacity: isInViewFioImageRef ? 1 : 0,
-            transition: 'opacity 1s ease-out',
-            animation: `${
-              isInViewFioImageRef ? 'fadeIn' : 'none'
-            } 0.5s ease-in`,
-          }}
-          className="md:col-span-1 md:h-full"
-        >
+      <section
+        ref={FioImageref}
+        style={{
+          opacity: isInViewFioImageRef ? 1 : 0,
+          transition: 'opacity 1s ease-out',
+          animation: `${isInViewFioImageRef ? 'fadeIn' : 'none'} 0.5s ease-in`,
+        }}
+        className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2 md:gap-4"
+      >
+        <div className="md:col-span-1 md:h-full">
           <Image
             src={Fio}
             alt="Florencia Feresin Arquitecta"
@@ -169,12 +165,12 @@ export default function Nosotras() {
         </div>
       </section>
       <div
-        className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start"
+        className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start overflow-x-hidden"
         ref={Mentionsref}
         style={{
-          transform: isInViewMentionsRef ? 'none' : 'translateX(-200px)',
           opacity: isInViewMentionsRef ? 1 : 0,
-          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          transform: isInViewMentionsRef ? 'none' : 'translateX(-100%)',
+          transition: 'all 1s ease',
         }}
       >
         <h1 className="text-3xl font-bold px-2">

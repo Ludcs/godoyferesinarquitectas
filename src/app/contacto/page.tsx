@@ -16,12 +16,12 @@ export default function Contacto() {
       <ScrollToTop />
       <Header />
       <section
-        className="py-14 flex flex-col justify-center items-start gap-8 bg-white transform text-start"
+        className="py-14 flex flex-col justify-center items-start gap-8 bg-white transform text-start overflow-x-hidden"
         ref={ContactRef}
         style={{
-          transform: isInViewContactRef ? 'none' : 'translateX(-200px)',
           opacity: isInViewContactRef ? 1 : 0,
-          transition: 'all .5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          transform: isInViewContactRef ? 'none' : 'translateX(-100%)',
+          transition: 'all 1s ease',
         }}
       >
         <h1 className="text-3xl font-bold px-2">

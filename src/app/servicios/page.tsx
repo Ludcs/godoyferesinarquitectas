@@ -12,11 +12,11 @@ import Link from 'next/link';
 import ContactFooter from '@/components/ContactFooter';
 
 export default function Servicios() {
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 1024px)');
-    const handleMediaChange = () => setIsDesktop(mediaQuery.matches);
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    const handleMediaChange = () => setIsTablet(mediaQuery.matches);
 
     handleMediaChange();
 
@@ -59,7 +59,7 @@ export default function Servicios() {
   // const isInViewService8Ref = useInView(Service8Ref, { once: true });
 
   return (
-    <main className="w-full">
+    <main className="w-full  overflow-x-hidden">
       <ScrollToTop />
       <Header />
       <div
@@ -81,9 +81,9 @@ export default function Servicios() {
         className="py-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start lg:px-4"
         ref={ServiceRef}
         style={{
-          transform: isInViewServiceRef ? 'none' : 'translateX(-200px)',
           opacity: isInViewServiceRef ? 1 : 0,
-          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          transform: isInViewServiceRef ? 'none' : 'translateX(-100%)',
+          transition: 'all 1s ease',
         }}
       >
         <h1 className="text-3xl font-bold px-2">
@@ -109,10 +109,11 @@ export default function Servicios() {
           ref={Service1Ref}
           style={{
             opacity: isInViewService1Ref ? 1 : 0,
-            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
-            animation: isDesktop
-              ? 'fadeIn'
-              : `${isInViewService1Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
+            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            transform: isInViewService1Ref ? 'none' : 'translateX(100%)',
+            // animation: isTablet
+            //   ? 'fadeIn'
+            //   : `${isInViewService1Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
@@ -127,11 +128,9 @@ export default function Servicios() {
           ref={Service2Ref}
           style={{
             opacity: isInViewService2Ref ? 1 : 0,
-            transform: isInViewService2Ref ? 'none' : 'translateX(-200px)',
-            transition: isDesktop
-              ? 'opacity 1s ease-out'
-              : 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-            animation: isDesktop ? 'fadeIn' : 'none',
+            transform: isInViewService2Ref ? 'none' : 'translateX(-100%)',
+            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
@@ -151,10 +150,11 @@ export default function Servicios() {
           ref={Service3Ref}
           style={{
             opacity: isInViewService3Ref ? 1 : 0,
-            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
-            animation: isDesktop
-              ? 'fadeIn'
-              : `${isInViewService3Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
+            transform: isInViewService3Ref ? 'none' : 'translateX(100%)',
+            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            // animation: isTablet
+            //   ? 'fadeIn'
+            //   : `${isInViewService3Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
@@ -184,11 +184,9 @@ export default function Servicios() {
           ref={Service4Ref}
           style={{
             opacity: isInViewService4Ref ? 1 : 0,
-            transform: isInViewService4Ref ? 'none' : 'translateX(-200px)',
-            transition: isDesktop
-              ? 'opacity 1s ease-out'
-              : 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-            animation: isDesktop ? 'fadeIn' : 'none',
+            transform: isInViewService4Ref ? 'none' : 'translateX(-100%)',
+            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
@@ -210,10 +208,11 @@ export default function Servicios() {
           ref={Service5Ref}
           style={{
             opacity: isInViewService5Ref ? 1 : 0,
-            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
-            animation: isDesktop
-              ? 'fadeIn'
-              : `${isInViewService5Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
+            transform: isInViewService5Ref ? 'none' : 'translateX(100%)',
+            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            // animation: isTablet
+            //   ? 'fadeIn'
+            //   : `${isInViewService5Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
@@ -230,11 +229,9 @@ export default function Servicios() {
           ref={Service6Ref}
           style={{
             opacity: isInViewService6Ref ? 1 : 0,
-            transform: isInViewService6Ref ? 'none' : 'translateX(-200px)',
-            transition: isDesktop
-              ? 'opacity 1s ease-out'
-              : 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-            animation: isDesktop ? 'fadeIn' : 'none',
+            transform: isInViewService6Ref ? 'none' : 'translateX(-100%)',
+            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full lg:px-0"
         >

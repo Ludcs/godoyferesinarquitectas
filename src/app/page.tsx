@@ -49,7 +49,7 @@ export default function Home() {
       <Header />
       <Slider />
       <section
-        className="py-28 px-2 bg-white transform text-start"
+        className="py-28 px-2 bg-white transform text-start xl:px-12 2xl:px-0  2xl:max-w-7xl 2xl:m-auto"
         ref={Sloganref}
         style={{
           opacity: isInViewSlogan ? 1 : 0,
@@ -57,14 +57,14 @@ export default function Home() {
           animation: `${isInViewSlogan ? 'fadeIn' : 'none'} 0.5s ease-in`,
         }}
       >
-        <h1 className="text-3xl font-bold px-2">
+        <h1 className="text-3xl font-bold px-2 xl:text-4xl 2xl:px-0">
           <span className="text-5xl font-bold">_</span>
           desde nuestro estudio de arquitectura independiente proyectamos y
           materializamos espacios.
           {/* {''}estudio de arquitectura independiente que proyecta y materializa
           ideas.  */}
         </h1>
-        <p className="text-justify text-md py-5 font-bold px-2 md:font-normal md:text-lg">
+        <p className="text-justify text-md py-5 font-bold px-2 md:font-normal md:text-lg 2xl:px-0">
           Trabajamos estrechamente con nuestros clientes para atender y resolver
           sus necesidades, expectativas y deseos. Brindamos un servicio
           profesional y humano, en compromiso con nuestra sociedad, y
@@ -94,7 +94,9 @@ export default function Home() {
           href={'/nosotras'}
           className="w-full py-2 flex justify-center items-center gap-4 text-lg hover:bg-primary hover:text-white transition-all duration-200 lg:w-1/2"
         >
-          <p className="md:text-2xl md:font-semiboldbold">Quienes somos?</p>
+          <p className="md:text-2xl md:font-semiboldbold 2xl:text-3xl">
+            Quienes somos?
+          </p>
           <FaArrowRight size={30} />
         </Link>
       </div>
@@ -139,7 +141,7 @@ export default function Home() {
               href={'/servicios'}
               className="w-full mt-10 py-2 flex justify-center items-center gap-4 text-lg hover:bg-white hover:text-primary transition-all duration-200 lg:mt-14"
             >
-              <p className="md:text-2xl md:font-semiboldbold">
+              <p className="md:text-2xl md:font-semiboldbold 2xl:text-3xl">
                 Nuestros servicios
               </p>
               <FaArrowRight size={30} />
@@ -152,11 +154,15 @@ export default function Home() {
           ref={ImageServicesref}
           style={{
             opacity: isInViewImageServices ? 1 : 0,
-            transform: isInViewImageServices ? 'none' : 'translateX(100%)',
-            transition: 'all 1s ease',
-            animation: isInViewImageServices
-              ? 'fadeInRight 1s ease-in'
-              : 'none',
+            transform:
+              isTablet || isInViewImageServices ? 'none' : 'translateX(100%)',
+            transition: isTablet ? 'all 1s ease' : 'opacity 1s ease-out',
+            animation:
+              isTablet && isInViewImageServices
+                ? 'fadeInRight 1s ease-in'
+                : isInViewImageServices
+                ? 'fadeIn 0.5s ease-in'
+                : 'none',
           }}
         >
           <Image
