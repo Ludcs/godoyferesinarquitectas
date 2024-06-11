@@ -39,7 +39,7 @@ export default function FormContact() {
 
   return (
     <form
-      className="w-full flex flex-col gap-4 px-2 pb-7"
+      className="w-full flex flex-col gap-4 px-2 pb-7 2xl:px-0"
       ref={formRef}
       onSubmit={sendEmail}
     >
@@ -72,17 +72,17 @@ export default function FormContact() {
         className="p-2  border-b border-black outline-none resize-none"
         autoComplete="off"
       ></textarea>
-      <div className="hidden lg:flex justify-center items-center">
+      <div className="hidden lg:flex justify-center items-center lg:py-8">
         <button
           type="submit"
-          className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200 md:w-1/2 lg:text-xl lg:w-1/3"
+          className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200 lg:text-xl lg:w-1/2 lg:mx-auto xl:w-1/4"
         >
           {loading ? 'Enviando...' : 'Enviar'}
         </button>
       </div>
       <button
         type="submit"
-        className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200 md:w-1/2 lg:text-xl lg:w-1/3 lg:hidden"
+        className="bg-primary py-4 font-bold text-white text-lg border  border-primary hover:text-primary hover:bg-white hover:border hover:border-primary transition-all duration-200 md:flex md:items-center md:justify-center md:w-1/2 md:mx-auto lg:hidden"
       >
         {loading ? 'Enviando...' : 'Enviar'}
       </button>

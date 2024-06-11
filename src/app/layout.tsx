@@ -51,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={myFont.className}>
-      <body className="flex flex-col min-h-screen max-w-[1920px] mx-auto">
+      <body className="flex flex-col min-h-screen">
         {/* <Header /> */}
         <main className="flex-grow">{children}</main>
         <Footer />

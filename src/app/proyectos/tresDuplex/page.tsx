@@ -131,7 +131,7 @@ export default function TresDuplex() {
           src={TresDuplex9}
           alt="Imagen 9 Proyecto Tres Duplex GyF Arquitectas"
           priority={true}
-          className="pb-4"
+          className="pb-4 2xl:pb-0"
         />
       </section>
       <ContactFooter />

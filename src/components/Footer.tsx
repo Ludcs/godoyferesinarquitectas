@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <main className="w-full bg-[#161616]">
-      <section className="px-2 pt-8 pb-2 flex flex-col items-start justify-center font-semibold text-white gap-5 lg:px-4 xl:px-12 2xl:text-lg 2xl:pt-28 2xl:px-0 2xl:max-w-7xl 2xl:m-auto">
+      <section className="px-2 pt-8 pb-2 flex flex-col items-start justify-center font-semibold text-white gap-5 lg:px-4 xl:px-12 2xl:gap-12 2xl:text-lg 2xl:pt-28 2xl:px-0 2xl:max-w-7xl 2xl:m-auto">
         <Image
           src={LogoFooter}
           alt="Logo Godoy + Feresin Arquitectas - Pie de pagina"

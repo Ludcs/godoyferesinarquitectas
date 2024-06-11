@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       <section
-        className="w-full"
+        className="w-full 2xl:px-0 2xl:max-w-7xl 2xl:m-auto"
         ref={TeamImageref}
         style={{
           transform: isInViewTeamImage ? 'none' : 'translateX(-200px)',
@@ -100,7 +100,7 @@ export default function Home() {
           <FaArrowRight size={30} />
         </Link>
       </div>
-      <section className="w-full overflow-x-hidden md:grid md:grid-cols-2">
+      <section className="w-full overflow-x-hidden md:grid md:grid-cols-2 2xl:px-0 2xl:max-w-7xl 2xl:m-auto">
         <div
           ref={PhraseServicesTabletRef}
           style={{

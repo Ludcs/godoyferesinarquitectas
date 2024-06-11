@@ -178,7 +178,7 @@ export default function CasaTavo() {
         <Image
           src={CasaTavo16}
           alt="Imagen 9 Proyecto La Soñada GyF Arquitectas"
-          className="w-full h-auto mb-4"
+          className="w-full h-auto mb-4 2xl:mb-0"
         />
       </section>
       <ContactFooter />

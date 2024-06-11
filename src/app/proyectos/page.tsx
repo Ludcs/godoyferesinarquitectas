@@ -12,7 +12,7 @@ export default function Proyectos() {
       <Header />
       <ScrollToTop />
 
-      <section className="w-full px-2 py-12 flex flex-col gap-2 md:gap-4 lg:px-4 lg:gap-6 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
+      <section className="w-full px-2 py-12 flex flex-col gap-2 md:gap-4 lg:px-4 lg:gap-6 2xl:py-0 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div className="h-auto relative">
           <Link href={'/proyectos/tresDuplex'}>
             <Image

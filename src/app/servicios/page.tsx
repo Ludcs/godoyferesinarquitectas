@@ -69,6 +69,7 @@ export default function Servicios() {
           transition: 'opacity 1s ease-out',
           animation: `${isInViewTopImageRef ? 'fadeIn' : 'none'} 0.5s ease-in`,
         }}
+        className="2xl:max-w-7xl 2xl:m-auto"
       >
         <Image
           src={ServicesTopImg}
@@ -86,16 +87,16 @@ export default function Servicios() {
           transition: 'all 1s ease',
         }}
       >
-        <h1 className="text-3xl font-bold px-2">
+        <h1 className="text-3xl font-bold px-2 2xl:text-4xl">
           <span className="text-5xl font-bold">_</span>
           {''}nuestros servicios
         </h1>
-        <p className="text-2xl font-bold px-2">
+        <p className="text-2xl font-bold px-2 2xl:text-3xl">
           Diseñamos, planificamos y construimos proyectos arquitectónicos
           creativos. Te asesoramos en el proceso y trabajamos de manera conjunta
           los espacios.
         </p>
-        <p className="px-2 text-[#ABABAB] md:font-normal md:text-lg">
+        <p className="px-2 text-[#ABABAB] md:font-normal md:text-lg 2xl:text-xl">
           Como profesionales de la Arquitectura realizamos diferentes tareas y
           podemos ayudarte a diseñar, planificar y construir tu inmueble. Te
           asesoramos sobre regularizaciones municipales, patologías o fallas
@@ -104,7 +105,7 @@ export default function Servicios() {
           Estos son los servicios que ofrecemos:
         </p>
       </section>
-      <div className="flex flex-col gap-2 w-full h-auto lg:grid lg:grid-cols-2 lg:gap-8 lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
+      <div className="flex flex-col gap-2 w-full h-auto overflow-x-hidden lg:grid lg:grid-cols-2 lg:gap-8 lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div
           ref={Service1Ref}
           style={{
@@ -145,7 +146,7 @@ export default function Servicios() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
+      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto overflow-x-hidden lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div
           ref={Service3Ref}
           style={{
@@ -203,7 +204,7 @@ export default function Servicios() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
+      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto overflow-x-hidden lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div
           ref={Service5Ref}
           style={{
@@ -214,7 +215,7 @@ export default function Servicios() {
             //   ? 'fadeIn'
             //   : `${isInViewService5Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
           }}
-          className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
+          className="px-4 pb-28 flex flex-col gap-2 w-full lg:px-0 md:pb-14"
         >
           <p className="text-2xl font-bold">
             Proyecto de Desarrollo Urbanístico
@@ -233,7 +234,7 @@ export default function Servicios() {
             transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
             // animation: isTablet ? 'fadeIn' : 'none',
           }}
-          className="px-4 pb-28 flex flex-col gap-2 w-full lg:px-0"
+          className="px-4 pb-28 flex flex-col gap-2 w-full lg:px-0 md:pb-14"
         >
           <p className="text-2xl font-bold">Interiorismo</p>
           <p className="md:text-lg">

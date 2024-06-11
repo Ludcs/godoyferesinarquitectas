@@ -9,7 +9,7 @@ export default function ContactFooter() {
   const isInViewContactContainer = useInView(ContactContainer, { once: true });
 
   return (
-    <section className="w-full py-14 flex flex-col justify-center items-center text-center bg-[#F3F3F3] 2xl:py-28">
+    <section className="w-full py-14 flex flex-col justify-center items-center text-center  2xl:py-28 2xl:px-0 2xl:max-w-7xl 2xl:m-auto">
       <div
         ref={ContactContainer}
         style={{

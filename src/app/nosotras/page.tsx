@@ -61,6 +61,7 @@ export default function Nosotras() {
           transition: 'opacity 1s ease-out',
           animation: `${isInViewTopImageRef ? 'fadeIn' : 'none'} 0.5s ease-in`,
         }}
+        className="2xl:max-w-7xl 2xl:m-auto"
       >
         <Image
           src={Team}
@@ -169,7 +170,7 @@ export default function Nosotras() {
         </div>
       </section>
       <div
-        className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start overflow-x-hidden 2xl:px-0  2xl:max-w-7xl 2xl:m-auto"
+        className="px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start overflow-x-hidden 2xl:px-0  2xl:max-w-7xl 2xl:m-auto"
         ref={Mentionsref}
         style={{
           opacity: isInViewMentionsRef ? 1 : 0,
