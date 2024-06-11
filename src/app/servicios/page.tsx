@@ -12,11 +12,11 @@ import Link from 'next/link';
 import ContactFooter from '@/components/ContactFooter';
 
 export default function Servicios() {
-  const [isTablet, setIsTablet] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 768px)');
-    const handleMediaChange = () => setIsTablet(mediaQuery.matches);
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const handleMediaChange = () => setIsDesktop(mediaQuery.matches);
 
     handleMediaChange();
 
@@ -59,7 +59,7 @@ export default function Servicios() {
   // const isInViewService8Ref = useInView(Service8Ref, { once: true });
 
   return (
-    <main className="w-full  overflow-x-hidden">
+    <main className="w-full">
       <ScrollToTop />
       <Header />
       <div
@@ -78,7 +78,7 @@ export default function Servicios() {
         />
       </div>
       <section
-        className="py-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start lg:px-4"
+        className="py-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start lg:px-4 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto"
         ref={ServiceRef}
         style={{
           opacity: isInViewServiceRef ? 1 : 0,
@@ -104,12 +104,12 @@ export default function Servicios() {
           Estos son los servicios que ofrecemos:
         </p>
       </section>
-      <div className="flex flex-col gap-2 w-full h-auto lg:grid lg:grid-cols-2 lg:gap-8 lg:px-4 lg:text-justify">
+      <div className="flex flex-col gap-2 w-full h-auto lg:grid lg:grid-cols-2 lg:gap-8 lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div
           ref={Service1Ref}
           style={{
             opacity: isInViewService1Ref ? 1 : 0,
-            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
             transform: isInViewService1Ref ? 'none' : 'translateX(100%)',
             // animation: isTablet
             //   ? 'fadeIn'
@@ -129,7 +129,7 @@ export default function Servicios() {
           style={{
             opacity: isInViewService2Ref ? 1 : 0,
             transform: isInViewService2Ref ? 'none' : 'translateX(-100%)',
-            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
             // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
@@ -145,13 +145,13 @@ export default function Servicios() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto lg:px-4 lg:text-justify">
+      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div
           ref={Service3Ref}
           style={{
             opacity: isInViewService3Ref ? 1 : 0,
             transform: isInViewService3Ref ? 'none' : 'translateX(100%)',
-            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
             // animation: isTablet
             //   ? 'fadeIn'
             //   : `${isInViewService3Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
@@ -185,7 +185,7 @@ export default function Servicios() {
           style={{
             opacity: isInViewService4Ref ? 1 : 0,
             transform: isInViewService4Ref ? 'none' : 'translateX(-100%)',
-            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
             // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
@@ -203,13 +203,13 @@ export default function Servicios() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto lg:px-4 lg:text-justify">
+      <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div
           ref={Service5Ref}
           style={{
             opacity: isInViewService5Ref ? 1 : 0,
             transform: isInViewService5Ref ? 'none' : 'translateX(100%)',
-            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
             // animation: isTablet
             //   ? 'fadeIn'
             //   : `${isInViewService5Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
@@ -230,7 +230,7 @@ export default function Servicios() {
           style={{
             opacity: isInViewService6Ref ? 1 : 0,
             transform: isInViewService6Ref ? 'none' : 'translateX(-100%)',
-            transition: isTablet ? 'opacity 1s ease-out' : 'all 1s ease',
+            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
             // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full lg:px-0"

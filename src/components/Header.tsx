@@ -53,7 +53,7 @@ export default function Header() {
 
   return (
     <div
-      className={`w-full px-2 py-8 bg-white sticky top-0 z-50 shadow-md lg:px-4 xl:px-12`}
+      className={`w-full px-2 py-8 bg-white sticky top-0 z-50 shadow-[0_12px_12px_-12px_rgba(0,0,0,0.1)] lg:px-4 xl:px-12`}
     >
       <div className="w-full flex justify-between items-center 2xl:max-w-7xl 2xl:m-auto">
         <Link href={'/'}>
@@ -72,7 +72,7 @@ export default function Header() {
             onClick={() => setOpenSideBar(true)}
           />
         </div>
-        <nav className="hidden px-4 lg:flex flex-row items-center justify-center gap-8 list-none uppercase font-bold">
+        <nav className="hidden lg:flex flex-row items-center justify-center gap-8 list-none uppercase font-bold">
           <Link
             href={'/'}
             className={`${

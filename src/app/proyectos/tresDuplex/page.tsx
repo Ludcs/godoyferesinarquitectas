@@ -47,12 +47,12 @@ export default function TresDuplex() {
         />
       </section>
       <section
-        className="w-full px-2 pt-12 flex flex-col md:text-lg lg:px-4"
+        className="w-full px-2 pt-12 flex flex-col md:text-lg lg:px-4 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto"
         ref={Descriptionref}
         style={{
-          transform: isInViewDescriptionref ? 'none' : 'translateX(-200px)',
+          transform: isInViewDescriptionref ? 'none' : 'translateX(-100%)',
           opacity: isInViewDescriptionref ? 1 : 0,
-          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          transition: 'all 1s ease',
         }}
       >
         <div className="w-full underline text-[#ABABAB] pb-6 ">
@@ -91,7 +91,7 @@ export default function TresDuplex() {
           </div>
         </article>
       </section>
-      <section className="w-full flex flex-col gap-4 pt-12 lg:gap-6">
+      <section className="w-full flex flex-col gap-4 pt-12 lg:gap-6 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <Image
           src={TresDuplex1}
           alt="Imagen 1 Proyecto Tres Duplex GyF Arquitectas"

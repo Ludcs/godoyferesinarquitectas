@@ -57,14 +57,14 @@ export default function Home() {
           animation: `${isInViewSlogan ? 'fadeIn' : 'none'} 0.5s ease-in`,
         }}
       >
-        <h1 className="text-3xl font-bold px-2 xl:text-4xl 2xl:px-0">
+        <h1 className="text-3xl font-bold px-2 xl:text-4xl xl:px-0 2xl:px-0">
           <span className="text-5xl font-bold">_</span>
           desde nuestro estudio de arquitectura independiente proyectamos y
           materializamos espacios.
           {/* {''}estudio de arquitectura independiente que proyecta y materializa
           ideas.  */}
         </h1>
-        <p className="text-justify text-md py-5 font-bold px-2 md:font-normal md:text-lg 2xl:px-0">
+        <p className="text-justify text-md py-5 font-bold px-2 md:font-normal md:text-lg xl:px-0 2xl:px-0">
           Trabajamos estrechamente con nuestros clientes para atender y resolver
           sus necesidades, expectativas y deseos. Brindamos un servicio
           profesional y humano, en compromiso con nuestra sociedad, y
