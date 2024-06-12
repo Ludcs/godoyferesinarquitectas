@@ -60,7 +60,9 @@ export default function Header() {
           <Image
             src={Logo}
             alt="Logo Godoy Feresin Arquitectas"
-            className="w-full h-auto lg:w-72"
+            className="min-w-64 lg:w-72"
+            width={500}
+            height={64}
             priority={true}
           />
         </Link>

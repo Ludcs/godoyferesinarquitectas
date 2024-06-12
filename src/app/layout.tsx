@@ -41,7 +41,8 @@ const myFont = localFont({
 export const metadata: Metadata = {
   title: 'GODOY + FERESIN ARQUITECTAS | Estudio de Arquitectura',
   description:
-    'Godoy Feresin Arquitectas es un estudio de arquitectura localizado en la ciudad de Parana - Entre Rios - Argentina',
+    'Godoy + Feresin Arquitectas es un estudio de arquitectura localizado en la ciudad de Parana - Entre Rios - Argentina',
+  //metadataBase: new URL('') 'https://nombre del dominio ya comprado' METADATABASE SOLO FUNCIONA EN PROD, ENTONCES HAY QUE BUILDEAR CON: NPM RUN BUILD && NPM RUN START
 };
 
 export default function RootLayout({

@@ -1,4 +1,5 @@
 'use client';
+import Logo from '../../public/assets/logos-png/rectangle-black2.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -74,8 +75,11 @@ export default function Sidebar({ setOpenSideBar }: SidebarProps) {
         <div className="flex justify-between items-center">
           <Link href={'/'} onClick={() => setOpenSideBar(false)}>
             <Image
-              src={'/assets/logos-png/rectangle-black.png'}
+              //src={'/assets/logos-png/rectangle-black.png'}
+              src={Logo}
               alt="Logo Godoy Feresin Arquitectas"
+              className="min-w-64"
+              // priority={true}
               width={500}
               height={64}
               priority={true}
