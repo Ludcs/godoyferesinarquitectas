@@ -17,6 +17,7 @@ export default function Footer() {
           src={LogoFooter}
           alt="Logo Godoy + Feresin Arquitectas - Pie de pagina"
           className="w-36 h-auto"
+          priority={true}
         />
         <div className="my-2 flex flex-col gap-2 md:w-full md:flex md:flex-row md:justify-start md:gap-12">
           <div className="my-2 flex flex-col gap-2">

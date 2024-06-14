@@ -14,7 +14,7 @@ export default function Contacto() {
   return (
     <main className="w-full">
       <ScrollToTop />
-      <Header />
+      {/* <Header /> */}
       <section
         className="py-14 flex flex-col justify-center items-start gap-8 bg-white transform text-start overflow-x-hidden xl:px-12 2xl:px-0 2xl:max-w-7xl 2xl:m-auto"
         ref={ContactRef}

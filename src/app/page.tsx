@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <main className="w-full">
       <ScrollToTop />
-      <Header />
+      {/* <Header /> */}
       <Slider />
       <section
         className="py-28 px-2 bg-white transform text-start xl:px-12 2xl:px-0  2xl:max-w-7xl 2xl:m-auto"

@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={myFont.className}>
       <body className="flex flex-col min-h-screen">
-        {/* <Header /> */}
+        <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>

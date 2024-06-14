@@ -28,7 +28,7 @@ export default function TresDuplex() {
 
   return (
     <main className="w-full">
-      <Header />
+      {/* <Header /> */}
       <ScrollToTop />
       <section
         ref={TopImageTresDuplexref}

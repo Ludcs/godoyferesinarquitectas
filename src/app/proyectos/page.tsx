@@ -9,7 +9,7 @@ import ContactFooter from '@/components/ContactFooter';
 export default function Proyectos() {
   return (
     <main className="w-full">
-      <Header />
+      {/* <Header /> */}
       <ScrollToTop />
 
       <section className="w-full px-2 py-12 flex flex-col gap-2 md:gap-4 lg:px-4 lg:gap-6 2xl:py-0 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">

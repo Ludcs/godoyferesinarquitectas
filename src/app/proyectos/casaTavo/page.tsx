@@ -36,7 +36,7 @@ export default function CasaTavo() {
 
   return (
     <main className="w-full">
-      <Header />
+      {/* <Header /> */}
       <ScrollToTop />
       <section
         ref={TopImageCasaTavoref}
