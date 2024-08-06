@@ -1,28 +1,29 @@
-'use client';
-import '../../app/home.css';
-import { useRef, useState, useEffect } from 'react';
-import { useInView } from 'framer-motion';
+"use client";
+import "../../app/home.css";
+import { useRef, useState, useEffect } from "react";
+import { useInView } from "framer-motion";
 
-import Header from '@/components/Header';
-import ServicesTopImg from '../../../public/assets/images/services_top_img.jpg';
-import ServicesMidleImg from '../../../public/assets/images/services_midle_img.jpg';
-import Image from 'next/image';
-import ScrollToTop from '@/components/ScrollToTop';
-import Link from 'next/link';
-import ContactFooter from '@/components/ContactFooter';
+import Header from "@/components/Header";
+import ServicesTopImg from "../../../public/assets/images/services_top_img.jpg";
+import Services1 from "../../../public/assets/images/services1.jpg";
+import Services2 from "../../../public/assets/images/services2.jpg";
+import Image from "next/image";
+import ScrollToTop from "@/components/ScrollToTop";
+import Link from "next/link";
+import ContactFooter from "@/components/ContactFooter";
 
 export default function Servicios() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
     const handleMediaChange = () => setIsDesktop(mediaQuery.matches);
 
     handleMediaChange();
 
-    mediaQuery.addEventListener('change', handleMediaChange);
+    mediaQuery.addEventListener("change", handleMediaChange);
 
-    return () => mediaQuery.removeEventListener('change', handleMediaChange);
+    return () => mediaQuery.removeEventListener("change", handleMediaChange);
   }, []);
 
   const TopImageref = useRef(null);
@@ -40,8 +41,11 @@ export default function Servicios() {
   const Service3Ref = useRef(null);
   const isInViewService3Ref = useInView(Service3Ref, { once: true });
 
-  const MidleImageref = useRef(null);
-  const isInViewMidleImageRef = useInView(MidleImageref, { once: true });
+  const MidleImageref1 = useRef(null);
+  const isInViewMidleImage1Ref = useInView(MidleImageref1, { once: true });
+
+  const MidleImageref2 = useRef(null);
+  const isInViewMidleImage2Ref = useInView(MidleImageref2, { once: true });
 
   const Service4Ref = useRef(null);
   const isInViewService4Ref = useInView(Service4Ref, { once: true });
@@ -66,8 +70,8 @@ export default function Servicios() {
         ref={TopImageref}
         style={{
           opacity: isInViewTopImageRef ? 1 : 0,
-          transition: 'opacity 1s ease-out',
-          animation: `${isInViewTopImageRef ? 'fadeIn' : 'none'} 0.5s ease-in`,
+          transition: "opacity 1s ease-out",
+          animation: `${isInViewTopImageRef ? "fadeIn" : "none"} 0.5s ease-in`,
         }}
         className="2xl:max-w-7xl 2xl:m-auto"
       >
@@ -83,13 +87,13 @@ export default function Servicios() {
         ref={ServiceRef}
         style={{
           opacity: isInViewServiceRef ? 1 : 0,
-          transform: isInViewServiceRef ? 'none' : 'translateX(-100%)',
-          transition: 'all 1s ease',
+          transform: isInViewServiceRef ? "none" : "translateX(-100%)",
+          transition: "all 1s ease",
         }}
       >
         <h1 className="text-3xl font-bold px-2 2xl:text-4xl">
           <span className="text-5xl font-bold">_</span>
-          {''}nuestros servicios
+          {""}nuestros servicios
         </h1>
         <p className="text-2xl font-bold px-2 2xl:text-3xl">
           Diseñamos, planificamos y construimos proyectos arquitectónicos
@@ -110,8 +114,8 @@ export default function Servicios() {
           ref={Service1Ref}
           style={{
             opacity: isInViewService1Ref ? 1 : 0,
-            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
-            transform: isInViewService1Ref ? 'none' : 'translateX(100%)',
+            transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
+            transform: isInViewService1Ref ? "none" : "translateX(100%)",
             // animation: isTablet
             //   ? 'fadeIn'
             //   : `${isInViewService1Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
@@ -129,8 +133,8 @@ export default function Servicios() {
           ref={Service2Ref}
           style={{
             opacity: isInViewService2Ref ? 1 : 0,
-            transform: isInViewService2Ref ? 'none' : 'translateX(-100%)',
-            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
+            transform: isInViewService2Ref ? "none" : "translateX(-100%)",
+            transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
             // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
@@ -145,14 +149,29 @@ export default function Servicios() {
           </p>
         </div>
       </div>
-
+      <div
+        className="pb-28 flex flex-col gap-2 w-full md:pb-14 2xl:max-w-7xl 2xl:mx-auto"
+        ref={MidleImageref1}
+        style={{
+          opacity: isInViewMidleImage1Ref ? 1 : 0,
+          transition: "opacity 1s ease-out",
+          animation: `${isInViewMidleImage1Ref ? "fadeIn" : "none"} 1s ease-in`,
+        }}
+      >
+        <Image
+          src={Services1}
+          alt="Foto de planos para la seccion de servicios"
+          priority={true}
+          className="w-fill h-full"
+        />
+      </div>
       <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto overflow-x-hidden lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div
           ref={Service3Ref}
           style={{
             opacity: isInViewService3Ref ? 1 : 0,
-            transform: isInViewService3Ref ? 'none' : 'translateX(100%)',
-            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
+            transform: isInViewService3Ref ? "none" : "translateX(100%)",
+            transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
             // animation: isTablet
             //   ? 'fadeIn'
             //   : `${isInViewService3Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
@@ -165,28 +184,12 @@ export default function Servicios() {
             Conceptualizamos la idea y analizamos el sitio.
           </p>
         </div>
-        {/* <div
-        className="pb-28 flex flex-col gap-2 w-full md:pb-14"
-        ref={MidleImageref}
-        style={{
-          opacity: isInViewMidleImageRef ? 1 : 0,
-          transition: 'opacity 1s ease-out',
-          animation: `${isInViewMidleImageRef ? 'fadeIn' : 'none'} 1s ease-in`,
-        }}
-      >
-        <Image
-          src={ServicesMidleImg}
-          alt="Foto de planos para la seccion de servicios"
-          priority={true}
-          className="w-fill h-full"
-        />
-      </div> */}
         <div
           ref={Service4Ref}
           style={{
             opacity: isInViewService4Ref ? 1 : 0,
-            transform: isInViewService4Ref ? 'none' : 'translateX(-100%)',
-            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
+            transform: isInViewService4Ref ? "none" : "translateX(-100%)",
+            transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
             // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
@@ -204,13 +207,29 @@ export default function Servicios() {
           </p>
         </div>
       </div>
+      <div
+        className="pb-28 flex flex-col gap-2 w-full md:pb-14 2xl:max-w-7xl 2xl:mx-auto"
+        ref={MidleImageref2}
+        style={{
+          opacity: isInViewMidleImage2Ref ? 1 : 0,
+          transition: "opacity 1s ease-out",
+          animation: `${isInViewMidleImage2Ref ? "fadeIn" : "none"} 1s ease-in`,
+        }}
+      >
+        <Image
+          src={Services2}
+          alt="Foto de planos para la seccion de servicios"
+          priority={true}
+          className="w-fill h-full"
+        />
+      </div>
       <div className="flex flex-col gap-2 w-full lg:grid lg:grid-cols-2 lg:gap-8 h-auto overflow-x-hidden lg:px-4 lg:text-justify 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div
           ref={Service5Ref}
           style={{
             opacity: isInViewService5Ref ? 1 : 0,
-            transform: isInViewService5Ref ? 'none' : 'translateX(100%)',
-            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
+            transform: isInViewService5Ref ? "none" : "translateX(100%)",
+            transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
             // animation: isTablet
             //   ? 'fadeIn'
             //   : `${isInViewService5Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
@@ -230,8 +249,8 @@ export default function Servicios() {
           ref={Service6Ref}
           style={{
             opacity: isInViewService6Ref ? 1 : 0,
-            transform: isInViewService6Ref ? 'none' : 'translateX(-100%)',
-            transition: isDesktop ? 'opacity 1s ease-out' : 'all 1s ease',
+            transform: isInViewService6Ref ? "none" : "translateX(-100%)",
+            transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
             // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full lg:px-0 md:pb-14"

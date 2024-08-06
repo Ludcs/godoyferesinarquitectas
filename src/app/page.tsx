@@ -1,7 +1,7 @@
 'use client';
 import './home.css';
 import ImageServices from '../../public/assets/images/imageDemo-services.jpg';
-import Header from '@/components/Header';
+// import Header from '@/components/Header';
 import Slider from '@/components/Slider';
 import ScrollToTop from '@/components/ScrollToTop';
 import Team from '../../public/assets/images/juntas.png';
@@ -11,6 +11,7 @@ import { useRef, useState, useEffect } from 'react';
 import { useInView } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa6';
 import ContactFooter from '@/components/ContactFooter';
+
 
 export default function Home() {
   const [isTablet, setIsTablet] = useState(false);
