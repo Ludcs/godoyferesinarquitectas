@@ -100,11 +100,6 @@ export default function AmpliacionVillaguay() {
       </section>
       <section className="w-full flex flex-col gap-4 pt-12 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <Image
-          src={VillaguayTop}
-          alt="Imagen 1 Proyecto La Soñada GyF Arquitectas"
-          className="w-full h-auto"
-        />
-        <Image
           src={Villaguay2}
           alt="Imagen 2 Proyecto La Soñada GyF Arquitectas"
           className="w-full h-auto"

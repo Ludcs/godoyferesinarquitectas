@@ -5,6 +5,7 @@ import Link from "next/link";
 import TresDuplexPrev from "../../../public/assets/images/proyectos/tresDuplex/04-Tres-duplex.jpg";
 import CasaTavoPrev from "../../../public/assets/images/proyectos/casaTavo/01-Tavo.jpg";
 import AmpliacionVillaguayPrev from "../../../public/assets/images/proyectos/ampliacionVillaguay/01-Villaguay.jpg";
+import QuinchoPrev from "../../../public/assets/images/proyectos/quinchoLaSoñada/quincho1.jpg";
 import ContactFooter from "@/components/ContactFooter";
 
 export default function Proyectos() {
@@ -52,6 +53,21 @@ export default function Proyectos() {
                 Ampliación Villaguay
               </h2>
               <p>Villaguay, Entre Ríos, Argentina.</p>
+            </div>
+          </Link>
+        </div>
+        <div className="h-auto relative">
+          <Link href={"/proyectos/quinchoLaSonada"}>
+            <Image
+              src={QuinchoPrev}
+              alt="Preview Proyecto Ampliación Laura"
+              className="w-full h-auto brightness-50 transition-all duration-200 ease-in hover:brightness-100"
+            />
+            <div className="pl-2 pb-2 text-white absolute z-[2] bottom-0 left-0">
+              <h2 className="text-white font-bold text-2xl">
+                Quincho para “La Soñada”
+              </h2>
+              <p>Paraná, Entre Ríos, Argentina.</p>
             </div>
           </Link>
         </div>
