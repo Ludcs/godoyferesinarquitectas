@@ -2,14 +2,11 @@
 import "../../app/home.css";
 import { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
-
-import Header from "@/components/Header";
 import ServicesTopImg from "../../../public/assets/images/services_top_img.jpg";
 import Services1 from "../../../public/assets/images/services1.jpg";
 import Services2 from "../../../public/assets/images/services2.jpg";
 import Image from "next/image";
 import ScrollToTop from "@/components/ScrollToTop";
-import Link from "next/link";
 import ContactFooter from "@/components/ContactFooter";
 
 export default function Servicios() {
@@ -56,16 +53,9 @@ export default function Servicios() {
   const Service6Ref = useRef(null);
   const isInViewService6Ref = useInView(Service6Ref, { once: true });
 
-  // const Service7Ref = useRef(null);
-  // const isInViewService7Ref = useInView(Service7Ref, { once: true });
-
-  // const Service8Ref = useRef(null);
-  // const isInViewService8Ref = useInView(Service8Ref, { once: true });
-
   return (
     <main className="w-full">
       <ScrollToTop />
-      {/* <Header /> */}
       <div
         ref={TopImageref}
         style={{
@@ -116,9 +106,6 @@ export default function Servicios() {
             opacity: isInViewService1Ref ? 1 : 0,
             transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
             transform: isInViewService1Ref ? "none" : "translateX(100%)",
-            // animation: isTablet
-            //   ? 'fadeIn'
-            //   : `${isInViewService1Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
@@ -135,7 +122,6 @@ export default function Servicios() {
             opacity: isInViewService2Ref ? 1 : 0,
             transform: isInViewService2Ref ? "none" : "translateX(-100%)",
             transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
-            // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
@@ -172,9 +158,6 @@ export default function Servicios() {
             opacity: isInViewService3Ref ? 1 : 0,
             transform: isInViewService3Ref ? "none" : "translateX(100%)",
             transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
-            // animation: isTablet
-            //   ? 'fadeIn'
-            //   : `${isInViewService3Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
@@ -190,7 +173,6 @@ export default function Servicios() {
             opacity: isInViewService4Ref ? 1 : 0,
             transform: isInViewService4Ref ? "none" : "translateX(-100%)",
             transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
-            // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full md:pb-14 lg:px-0"
         >
@@ -230,9 +212,6 @@ export default function Servicios() {
             opacity: isInViewService5Ref ? 1 : 0,
             transform: isInViewService5Ref ? "none" : "translateX(100%)",
             transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
-            // animation: isTablet
-            //   ? 'fadeIn'
-            //   : `${isInViewService5Ref ? 'fadeInRight' : 'none'} 1s ease-in`,
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full lg:px-0 md:pb-14"
         >
@@ -251,7 +230,6 @@ export default function Servicios() {
             opacity: isInViewService6Ref ? 1 : 0,
             transform: isInViewService6Ref ? "none" : "translateX(-100%)",
             transition: isDesktop ? "opacity 1s ease-out" : "all 1s ease",
-            // animation: isTablet ? 'fadeIn' : 'none',
           }}
           className="px-4 pb-28 flex flex-col gap-2 w-full lg:px-0 md:pb-14"
         >
@@ -263,42 +241,6 @@ export default function Servicios() {
           </p>
         </div>
       </div>
-      {/* <div
-        ref={Service7Ref}
-        style={{
-          opacity: isInViewService7Ref ? 1 : 0,
-          transition: 'all 1s ease',
-          animation: `${
-            isInViewService7Ref ? 'fadeInRight' : 'none'
-          } 1s ease-in`,
-        }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full"
-      >
-        <p className="text-2xl font-bold">Proyecto de desarrollo urbanístico</p>
-        <p>
-          Se entiende por la planificación mediante el proyecto parcial o
-          sectorial de un área determinada, dentro de un conglomerado
-          poblacional o ciudad. Puede referir al desarrollo de loteos,
-          mejoramiento de urbanizaciones como a intervención de microescala en
-          lugares públicos y/o abiertos.
-        </p>
-      </div>
-      <div
-        ref={Service8Ref}
-        style={{
-          transform: isInViewService8Ref ? 'none' : 'translateX(-200px)',
-          opacity: isInViewService8Ref ? 1 : 0,
-          transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        }}
-        className="px-4 pb-28 flex flex-col gap-2 w-full"
-      >
-        <p className="text-2xl font-bold">Interiorismo</p>
-        <p>
-          El diseño de interiores se centra en la estética y funcionalidad del
-          espacio interior. Incluye la selección de terminaciones, mobiliario,
-          iluminación y detalles decorativos.
-        </p>
-      </div> */}
       <ContactFooter />
     </main>
   );

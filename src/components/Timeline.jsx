@@ -7,9 +7,6 @@ export default function Timeline() {
           2023 - Mención honorífica - Concurso Provincial de anteproyectos sede
           CoPAER e ideas para su emplazamiento.
         </time>
-        {/* <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          Application UI code in Tailwind CSS
-        </h3> */}
         <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 2xl:text-lg">
           Autores: Arq. Ricardo Jaimovich, Arq. Marianela Galli, Arq. Florencia
           Feresin, Arq. Piero Rossetto. Colaboradoras: Ileana Maillen Famin y
@@ -22,9 +19,6 @@ export default function Timeline() {
           2021 - 2do Premio - Concurso Monumento en recordación de las víctimas
           del Holocausto Nazi.
         </time>
-        {/* <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          Marketing UI design in Figma
-        </h3> */}
         <p className="text-base font-normal text-gray-500 dark:text-gray-400 2xl:text-lg">
           Autores: Arq. Ricardo Jaimovich, Arq. Fiorella Godoy y Arq. Marianela
           Galli.
@@ -36,9 +30,6 @@ export default function Timeline() {
           2018 - Encuentro de Jovenes Investigadores de Universidad Nacional del
           Litoral
         </time>
-        {/* <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          Marketing UI design in Figma
-        </h3> */}
         <p className="text-base font-normal text-gray-500 dark:text-gray-400 2xl:text-lg">
           Trabajo “Movilidad de personas con diversidad funcional. La
           construcción de la inclusividad urbana en el área metropolitana Santa
@@ -52,9 +43,6 @@ export default function Timeline() {
           2017 - Mención - “XXI Encuentro de Jóvenes Investigadores de
           Universidad Nacional del Litoral”.
         </time>
-        {/* <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          E-Commerce UI code in Tailwind CSS
-        </h3> */}
         <p className="text-base font-normal text-gray-500 dark:text-gray-400 2xl:text-lg">
           Trabajo “Paisajes rurales como construcción cultural educativa: su
           influencia en la configuración espacial de las escuelas de familia

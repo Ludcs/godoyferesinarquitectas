@@ -1,6 +1,5 @@
 "use client";
 import "@/app/home.css";
-import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import Link from "next/link";
 import Image from "next/image";
@@ -28,7 +27,6 @@ export default function TresDuplex() {
 
   return (
     <main className="w-full">
-      {/* <Header /> */}
       <ScrollToTop />
       <section
         ref={TopImageTresDuplexref}
@@ -42,7 +40,7 @@ export default function TresDuplex() {
       >
         <Image
           src={TresDuplexPrev}
-          alt="Header Image Proyecto Tres Duplex"
+          alt="Header Image Proyecto Tres Duplex GyF Arquitectas"
           className="w-full h-auto"
         />
       </section>

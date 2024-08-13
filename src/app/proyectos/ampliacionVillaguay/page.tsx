@@ -1,16 +1,10 @@
 "use client";
 import "@/app/home.css";
-import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import CasaTavoPrev from "../../../../public/assets/images/proyectos/casaTavo/01-Tavo.jpg";
-import CasaTavo1 from "../../../../public/assets/images/proyectos/casaTavo/02-Tavo.jpg";
-import CasaTavo2 from "../../../../public/assets/images/proyectos/casaTavo/03-Tavo.jpg";
-import CasaTavo3 from "../../../../public/assets/images/proyectos/casaTavo/04-Tavo.jpg";
-import CasaTavo4 from "../../../../public/assets/images/proyectos/casaTavo/05-Tavo.jpg";
 import VillaguayTop from "../../../../public/assets/images/proyectos/ampliacionVillaguay/01-Villaguay.jpg";
 import Villaguay2 from "../../../../public/assets/images/proyectos/ampliacionVillaguay/02-Villaguay.jpg";
 import Villaguay3 from "../../../../public/assets/images/proyectos/ampliacionVillaguay/03-Villaguay.jpg";
@@ -28,7 +22,6 @@ export default function AmpliacionVillaguay() {
 
   return (
     <main className="w-full">
-      {/* <Header /> */}
       <ScrollToTop />
       <section
         ref={TopImageVillaguayref}
@@ -42,7 +35,7 @@ export default function AmpliacionVillaguay() {
       >
         <Image
           src={VillaguayTop}
-          alt="Header Image Proyecto La Soñada"
+          alt="Header Image Proyecto Ampliación Casa Villaguay"
           className="w-full h-auto"
           priority={true}
         />
@@ -101,17 +94,17 @@ export default function AmpliacionVillaguay() {
       <section className="w-full flex flex-col gap-4 pt-12 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <Image
           src={Villaguay2}
-          alt="Imagen 2 Proyecto La Soñada GyF Arquitectas"
+          alt="Imagen 2 Proyecto Ampliación Casa Villaguay GyF Arquitectas"
           className="w-full h-auto"
         />
         <Image
           src={Villaguay3}
-          alt="Imagen 3 Proyecto La Soñada GyF Arquitectas"
+          alt="Imagen 3 Proyecto Ampliación Casa Villaguay GyF Arquitectas"
           className="w-full h-auto"
         />
         <Image
           src={Villaguay4}
-          alt="Imagen 5 Proyecto La Soñada GyF Arquitectas"
+          alt="Imagen 5 Proyecto Ampliación Casa Villaguay GyF Arquitectas"
           className="w-full h-auto"
         />
       </section>

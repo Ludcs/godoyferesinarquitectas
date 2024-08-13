@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,9 +10,7 @@ import ContactFooter from "@/components/ContactFooter";
 export default function Proyectos() {
   return (
     <main className="w-full">
-      {/* <Header /> */}
       <ScrollToTop />
-
       <section className="w-full px-2 py-12 flex flex-col gap-2 md:gap-4 lg:px-4 lg:gap-6 2xl:py-0 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <div className="h-auto relative">
           <Link href={"/proyectos/tresDuplex"}>
@@ -32,7 +29,7 @@ export default function Proyectos() {
           <Link href={"/proyectos/casaTavo"}>
             <Image
               src={CasaTavoPrev}
-              alt="Preview Proyecto Casa Tavo"
+              alt="Preview Proyecto La Soñada"
               className="w-full h-auto brightness-50 transition-all duration-200 ease-in hover:brightness-100"
             />
             <div className="pl-2 pb-2 text-white absolute z-[2] bottom-0 left-0">
@@ -45,7 +42,7 @@ export default function Proyectos() {
           <Link href={"/proyectos/ampliacionVillaguay"}>
             <Image
               src={AmpliacionVillaguayPrev}
-              alt="Preview Proyecto Ampliación Laura"
+              alt="Preview Proyecto Ampliación Villaguay"
               className="w-full h-auto brightness-50 transition-all duration-200 ease-in hover:brightness-100"
             />
             <div className="pl-2 pb-2 text-white absolute z-[2] bottom-0 left-0">
@@ -60,7 +57,7 @@ export default function Proyectos() {
           <Link href={"/proyectos/quinchoLaSonada"}>
             <Image
               src={QuinchoPrev}
-              alt="Preview Proyecto Ampliación Laura"
+              alt="Preview Proyecto Quincho para La Soñada"
               className="w-full h-auto brightness-50 transition-all duration-200 ease-in hover:brightness-100"
             />
             <div className="pl-2 pb-2 text-white absolute z-[2] bottom-0 left-0">

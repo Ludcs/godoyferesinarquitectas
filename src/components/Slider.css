@@ -6,14 +6,12 @@
 div.swiper-button-prev,
 div.swiper-button-next {
   color: rgb(255, 255, 255);
-  /* background-color: #fff; */
-  /* padding: 15px; */
 }
 
 @media screen and (max-width: 640px) {
   div.swiper-button-prev,
   div.swiper-button-next {
-    display: none; /* Oculta los elementos */
+    display: none;
   }
 }
 
@@ -32,8 +30,6 @@ span.swiper-pagination-bullet {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;

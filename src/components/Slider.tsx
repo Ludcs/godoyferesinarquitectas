@@ -1,15 +1,13 @@
-'use client';
-import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { images } from '@/libs/images';
-import { motion } from 'framer-motion';
+"use client";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { images } from "@/libs/images";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-import './Slider.css';
+import "./Slider.css";
 
 export default function Slider() {
   return (

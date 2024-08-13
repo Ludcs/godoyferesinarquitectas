@@ -20,7 +20,6 @@ export default function NotFound() {
 
   return (
     <main className="w-full 2xl:px-0 overflow-x-hidden">
-      {/* <Header /> */}
       <div className="h-[600px] bg-[#f3f3f3] flex flex-col justify-center items-center gap-6 2xl:gap-10">
         <h1 className="text-2xl text-center font-bold 2xl:text-3xl">
           No pudimos localizar el contenido que estás buscando.

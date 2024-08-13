@@ -1,17 +1,15 @@
-'use client';
+"use client";
 
-import '../home.css';
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
-import Team from '../../../public/assets/images/juntas.png';
-import Flo from '../../../public/assets/images/flo.png';
-import Fio from '../../../public/assets/images/fio.png';
-import Link from 'next/link';
-import Image from 'next/image';
-import Header from '@/components/Header';
-import Timeline from '@/components/Timeline';
-import ScrollToTop from '@/components/ScrollToTop';
-import ContactFooter from '@/components/ContactFooter';
+import "../home.css";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+import Team from "../../../public/assets/images/juntas.png";
+import Flo from "../../../public/assets/images/flo.png";
+import Fio from "../../../public/assets/images/fio.png";
+import Image from "next/image";
+import Timeline from "@/components/Timeline";
+import ScrollToTop from "@/components/ScrollToTop";
+import ContactFooter from "@/components/ContactFooter";
 
 export default function Nosotras() {
   const TopImageref = useRef(null);
@@ -29,37 +27,15 @@ export default function Nosotras() {
   const Mentionsref = useRef(null);
   const isInViewMentionsRef = useInView(Mentionsref, { once: true });
 
-  // const items = [
-  //   {
-  //     title: 'May 1940',
-  //     cardTitle: 'Dunkirk',
-  //     url: 'http://www.history.com',
-  //     cardSubtitle:
-  //       'Men of the British Expeditionary Force (BEF) wade out to..',
-  //     cardDetailedText:
-  //       'Men of the British Expeditionary Force (BEF) wade out to..',
-  //   },
-  //   {
-  //     title: 'May 1940',
-  //     cardTitle: 'Dunkirk',
-  //     url: 'http://www.history.com',
-  //     cardSubtitle:
-  //       'Men of the British Expeditionary Force (BEF) wade out to..',
-  //     cardDetailedText:
-  //       'Men of the British Expeditionary Force (BEF) wade out to..',
-  //   },
-  // ];
-
   return (
     <main className="w-full">
       <ScrollToTop />
-      {/* <Header /> */}
       <div
         ref={TopImageref}
         style={{
           opacity: isInViewTopImageRef ? 1 : 0,
-          transition: 'opacity 1s ease-out',
-          animation: `${isInViewTopImageRef ? 'fadeIn' : 'none'} 0.5s ease-in`,
+          transition: "opacity 1s ease-out",
+          animation: `${isInViewTopImageRef ? "fadeIn" : "none"} 0.5s ease-in`,
         }}
         className="2xl:max-w-7xl 2xl:m-auto"
       >
@@ -75,13 +51,13 @@ export default function Nosotras() {
         ref={OurStudyref}
         style={{
           opacity: isInViewOurStudyRef ? 1 : 0,
-          transform: isInViewOurStudyRef ? 'none' : 'translateX(-100%)',
-          transition: 'all 1s ease',
+          transform: isInViewOurStudyRef ? "none" : "translateX(-100%)",
+          transition: "all 1s ease",
         }}
       >
         <h1 className="text-3xl font-bold px-2 2xl:px-0 2xl:text-4xl ">
           <span className="text-5xl font-bold">_</span>
-          {''}nuestro estudio
+          {""}nuestro estudio
         </h1>
         <p className="text-2xl font-bold px-2 2xl:px-0 2xl:text-3xl">
           Colegas y amigas. Trabajamos en equipo desde hace años y en diferentes
@@ -99,8 +75,8 @@ export default function Nosotras() {
         ref={FloImageref}
         style={{
           opacity: isInViewFloImageRef ? 1 : 0,
-          transition: 'opacity 1s ease-out',
-          animation: `${isInViewFloImageRef ? 'fadeIn' : 'none'} 0.5s ease-in`,
+          transition: "opacity 1s ease-out",
+          animation: `${isInViewFloImageRef ? "fadeIn" : "none"} 0.5s ease-in`,
         }}
         className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2 md:gap-4 2xl:px-0  2xl:max-w-7xl 2xl:m-auto"
       >
@@ -134,8 +110,8 @@ export default function Nosotras() {
         ref={FioImageref}
         style={{
           opacity: isInViewFioImageRef ? 1 : 0,
-          transition: 'opacity 1s ease-out',
-          animation: `${isInViewFioImageRef ? 'fadeIn' : 'none'} 0.5s ease-in`,
+          transition: "opacity 1s ease-out",
+          animation: `${isInViewFioImageRef ? "fadeIn" : "none"} 0.5s ease-in`,
         }}
         className="pb-28 px-2 flex flex-col justify-center items-start gap-8 bg-white transform text-start md:w-full md:grid md:grid-cols-2 md:gap-4 2xl:px-0  2xl:max-w-7xl 2xl:m-auto"
       >
@@ -174,13 +150,13 @@ export default function Nosotras() {
         ref={Mentionsref}
         style={{
           opacity: isInViewMentionsRef ? 1 : 0,
-          transform: isInViewMentionsRef ? 'none' : 'translateX(-100%)',
-          transition: 'all 1s ease',
+          transform: isInViewMentionsRef ? "none" : "translateX(-100%)",
+          transition: "all 1s ease",
         }}
       >
         <h1 className="text-3xl font-bold px-2">
           <span className="text-5xl font-bold">_</span>
-          {''}menciones
+          {""}menciones
         </h1>
         <div className="w-full ml-1 2xl:ml-2">
           <Timeline />

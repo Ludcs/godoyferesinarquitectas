@@ -1,10 +1,10 @@
-'use client';
-import Logo from '../../public/assets/logos-png/rectangle-black2.png';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { FaXmark } from 'react-icons/fa6';
-import { Dispatch, SetStateAction } from 'react';
+"use client";
+import Logo from "../../public/assets/logos-png/rectangle-black2.png";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { FaXmark } from "react-icons/fa6";
+import { Dispatch, SetStateAction } from "react";
 
 interface MobileNavLinkProps {
   title: string;
@@ -17,11 +17,11 @@ interface SidebarProps {
 }
 
 const sidebarLinks = [
-  { title: 'Home', href: '/' },
-  { title: 'Nosotras', href: '/nosotras' },
-  { title: 'Proyectos', href: '/proyectos' },
-  { title: 'Servicios', href: '/servicios' },
-  { title: 'Contacto', href: '/contacto' },
+  { title: "Home", href: "/" },
+  { title: "Nosotras", href: "/nosotras" },
+  { title: "Proyectos", href: "/proyectos" },
+  { title: "Servicios", href: "/servicios" },
+  { title: "Contacto", href: "/contacto" },
 ];
 
 const menuVars = {
@@ -63,7 +63,6 @@ const containerVars = {
 
 export default function Sidebar({ setOpenSideBar }: SidebarProps) {
   return (
-    //Motion div 1:
     <motion.div
       className="w-full h-screen fixed left-0 top-0 origin-top font-bold bg-primary z-30"
       variants={menuVars}
@@ -73,13 +72,11 @@ export default function Sidebar({ setOpenSideBar }: SidebarProps) {
     >
       <div className="flex flex-col h-full px-2 py-8">
         <div className="flex justify-between items-center">
-          <Link href={'/'} onClick={() => setOpenSideBar(false)}>
+          <Link href={"/"} onClick={() => setOpenSideBar(false)}>
             <Image
-              //src={'/assets/logos-png/rectangle-black.png'}
               src={Logo}
               alt="Logo Godoy Feresin Arquitectas"
               className="min-w-64"
-              // priority={true}
               width={500}
               height={64}
               priority={true}
@@ -93,7 +90,6 @@ export default function Sidebar({ setOpenSideBar }: SidebarProps) {
             />
           </div>
         </div>
-        {/* Motion div 2: */}
         <motion.div
           className="flex flex-col h-full justify-center items-center gap-5 font-thin"
           variants={containerVars}
@@ -119,7 +115,7 @@ export default function Sidebar({ setOpenSideBar }: SidebarProps) {
 
 const mobileLinkVars = {
   initial: {
-    y: '30vh',
+    y: "30vh",
     transition: {
       duration: 0.5,
       ease: [0.37, 0, 0.63, 1],
@@ -140,7 +136,6 @@ const MobileNavLink: React.FC<MobileNavLinkProps> = ({
   setOpenSideBar,
 }) => {
   return (
-    //Motion div 1:
     <motion.div className="text-5xl uppercase" variants={mobileLinkVars}>
       <Link href={href} onClick={() => setOpenSideBar(false)}>
         {title}

@@ -1,6 +1,5 @@
 "use client";
 import "@/app/home.css";
-import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +19,6 @@ import Quincho11 from "../../../../public/assets/images/proyectos/quinchoLaSoña
 import Quincho12 from "../../../../public/assets/images/proyectos/quinchoLaSoñada/quincho12.jpg";
 import Quincho13 from "../../../../public/assets/images/proyectos/quinchoLaSoñada/quincho13.jpg";
 import Quincho14 from "../../../../public/assets/images/proyectos/quinchoLaSoñada/quincho14.jpg";
-
 import ContactFooter from "@/components/ContactFooter";
 
 export default function QuinchoLaSonada() {
@@ -34,7 +32,6 @@ export default function QuinchoLaSonada() {
 
   return (
     <main className="w-full">
-      {/* <Header /> */}
       <ScrollToTop />
       <section
         ref={TopImageQuinchoref}
@@ -48,7 +45,7 @@ export default function QuinchoLaSonada() {
       >
         <Image
           src={QuinchoPrev}
-          alt="Header Image Proyecto Quincho"
+          alt="Header Image Proyecto Quincho para La Soñada GyF Arquitectas"
           className="w-full h-auto"
         />
       </section>
@@ -95,72 +92,72 @@ export default function QuinchoLaSonada() {
       <section className="w-full flex flex-col gap-4 pt-12 lg:gap-6 2xl:px-0 2xl:max-w-7xl 2xl:mx-auto">
         <Image
           src={Quincho2}
-          alt="Imagen 2 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 2 Proyecto Quincho para La Soñada GyF Arquitectas"
           className="w-full h-auto"
         />
         <Image
           src={Quincho3}
-          alt="Imagen 3 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 3 Proyecto Quincho para La Soñada GyF Arquitectas"
           className="w-full h-auto"
         />
         <Image
           src={Quincho4}
-          alt="Imagen 4 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 4 Proyecto Quincho para La Soñada GyF Arquitectas"
           className="w-full h-auto"
         />
         <Image
           src={Quincho5}
-          alt="Imagen 5 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 5 Proyecto Quincho para La Soñada GyF Arquitectas"
           className="w-full h-auto"
         />
         <Image
           src={Quincho6}
-          alt="Imagen 6 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 6 Proyecto Quincho para La Soñada GyF Arquitectas"
           className="w-full h-auto"
         />
         <Image
           src={Quincho7}
-          alt="Imagen 7 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 7 Proyecto Quincho para La Soñada GyF Arquitectas"
           className="w-full h-auto"
         />
         <Image
           src={Quincho8}
-          alt="Imagen 8 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 8 Proyecto Quincho para La Soñada GyF Arquitectas"
           className="w-full h-auto"
         />
         <Image
           src={Quincho9}
-          alt="Imagen 9 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 9 Proyecto Quincho para La Soñada GyF Arquitectas"
           priority={true}
           className="w-full h-auto"
         />
         <Image
           src={Quincho10}
-          alt="Imagen 10 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 10 Proyecto Quincho para La Soñada GyF Arquitectas"
           priority={true}
           className="w-full h-auto"
         />
         <Image
           src={Quincho11}
-          alt="Imagen 11 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 11 Proyecto Quincho para La Soñada GyF Arquitectas"
           priority={true}
           className="w-full h-auto"
         />
         <Image
           src={Quincho12}
-          alt="Imagen 12 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 12 Proyecto Quincho para La Soñada GyF Arquitectas"
           priority={true}
           className="w-full h-auto"
         />
         <Image
           src={Quincho13}
-          alt="Imagen 13 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 13 Proyecto Quincho para La Soñada GyF Arquitectas"
           priority={true}
           className="w-full h-auto"
         />
         <Image
           src={Quincho14}
-          alt="Imagen 14 Proyecto Quincho GyF Arquitectas"
+          alt="Imagen 14 Proyecto Quincho para La Soñada GyF Arquitectas"
           priority={true}
           className="pb-4 2xl:pb-0"
         />

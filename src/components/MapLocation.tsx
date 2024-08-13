@@ -1,13 +1,10 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { Map, Marker, ZoomControl } from 'pigeon-maps';
-import MarkerUbi from '../../public/assets/logos-png/market-map.png';
-import { useState } from 'react';
+import Image from "next/image";
+import { Map, Marker, ZoomControl } from "pigeon-maps";
+import MarkerUbi from "../../public/assets/logos-png/market-map.png";
 
 export default function MapLocation() {
-  //const [showInfo, setshowInfo] = useState(false);
-
   return (
     <div className="h-[600px]">
       <Map

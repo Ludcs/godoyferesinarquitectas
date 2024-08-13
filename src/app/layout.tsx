@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-//import { Inter } from 'next/font/google';
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
-//const inter = Inter({ subsets: ['latin'] });
 
 const myFont = localFont({
   src: [
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
   title: "GODOY + FERESIN ARQUITECTAS | Estudio de Arquitectura",
   description:
     "Godoy + Feresin Arquitectas es un estudio de arquitectura localizado en la ciudad de Parana - Entre Rios - Argentina",
-  //metadataBase: new URL(""), 'https://nombre del dominio ya comprado' METADATABASE SOLO FUNCIONA EN PROD, ENTONCES HAY QUE BUILDEAR CON: NPM RUN BUILD && NPM RUN START
+  metadataBase: new URL("https://godoyferesinarquitectas.com.ar/"),
   openGraph: {
     images: "/opengraph-image.jpg",
   },

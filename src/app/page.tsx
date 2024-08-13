@@ -1,7 +1,6 @@
 "use client";
 import "./home.css";
 import ImageServices from "../../public/assets/images/imageDemo-services.jpg";
-// import Header from '@/components/Header';
 import Slider from "@/components/Slider";
 import ScrollToTop from "@/components/ScrollToTop";
 import Team from "../../public/assets/images/juntas.png";
@@ -46,7 +45,6 @@ export default function Home() {
   return (
     <main className="w-full">
       <ScrollToTop />
-      {/* <Header /> */}
       <Slider />
       <section
         className="py-28 px-2 bg-white transform text-start xl:px-12 2xl:px-0  2xl:max-w-7xl 2xl:m-auto"
@@ -61,8 +59,6 @@ export default function Home() {
           <span className="text-5xl font-bold">_</span>
           desde nuestro estudio de arquitectura independiente proyectamos y
           materializamos espacios.
-          {/* {''}estudio de arquitectura independiente que proyecta y materializa
-          ideas.  */}
         </h1>
         <p className="text-justify text-md py-5 font-bold px-2 md:font-normal md:text-lg xl:px-0 2xl:px-0">
           Trabajamos estrechamente con nuestros clientes para atender y resolver
