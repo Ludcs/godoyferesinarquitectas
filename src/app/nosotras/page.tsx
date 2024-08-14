@@ -125,7 +125,7 @@ export default function Nosotras() {
         </div>
         <div>
           <h3 className="text-lg font-bold pt-4 md:pt-0 2xl:text-xl">
-            Fiorela GODOY
+            Fiorella GODOY
           </h3>
           <p className="text-[#ABABAB] 2xl:text-lg">Arquitecta</p>
           <article className="text-[#ABABAB] pt-4 md:leading-relaxed 2xl:text-lg">

@@ -18,7 +18,7 @@ export default function Footer() {
         />
         <div className="my-2 flex flex-col gap-2 md:w-full md:flex md:flex-row md:justify-start md:gap-12">
           <div className="my-2 flex flex-col gap-2">
-            <p>- direccion:</p>
+            <p>- dirección:</p>
             <Link
               href={
                 "https://www.google.com/maps/place/Godoy+%2B+Feresin+Arquitectas/@-31.7267129,-60.4906119,15z/data=!4m6!3m5!1s0xa05bace33c5d16d7:0x9c0a3f0a6db31968!8m2!3d-31.7267129!4d-60.4906119!16s%2Fg%2F11vpy5p10w?entry=ttu"
@@ -32,7 +32,7 @@ export default function Footer() {
             </Link>
           </div>
           <div className=" my-2 flex flex-col gap-2">
-            <p>- telefono:</p>
+            <p>- teléfono:</p>
             <Link
               href={"https://api.whatsapp.com/send?phone=5493435028431"}
               target="_blank"

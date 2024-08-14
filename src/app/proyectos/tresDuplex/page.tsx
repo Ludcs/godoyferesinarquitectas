@@ -58,7 +58,7 @@ export default function TresDuplex() {
         </div>
         <article>
           <div>
-            <h1 className="font-bold text-3xl">Tres Duplex</h1>
+            <h1 className="font-bold text-3xl">Tres Dúplex</h1>
             <p className="font-semibold">Residencial</p>
           </div>
           <div className="pb-6 text-[#ABABAB]">

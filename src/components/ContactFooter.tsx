@@ -1,8 +1,8 @@
-'use client';
-import '@/app/globals.css';
-import Link from 'next/link';
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
+"use client";
+import "@/app/globals.css";
+import Link from "next/link";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 export default function ContactFooter() {
   const ContactContainer = useRef(null);
@@ -15,17 +15,17 @@ export default function ContactFooter() {
         style={{
           opacity: ContactContainer ? 1 : 0,
           animation: `${
-            isInViewContactContainer ? 'zoomIn' : 'none'
+            isInViewContactContainer ? "zoomIn" : "none"
           } 0.5s ease-in`,
         }}
         className="flex flex-col"
       >
         <p className="text-3xl font-bold 2xl:text-4xl">
-          Tenes un proyecto en mente?
+          Tenés un proyecto en mente?
         </p>
         <div className="mt-10 mb-10">
           <Link
-            href={'/contacto'}
+            href={"/contacto"}
             className="text-lg px-5 py-2 border border-solid border-black hover:bg-black hover:text-white transition-all duration-200 2xl:text-[26px]"
           >
             Contactanos

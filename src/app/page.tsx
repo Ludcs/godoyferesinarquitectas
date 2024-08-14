@@ -91,7 +91,7 @@ export default function Home() {
           className="w-full py-2 flex justify-center items-center gap-4 text-lg hover:bg-primary hover:text-white transition-all duration-200 lg:w-1/2"
         >
           <p className="md:text-2xl md:font-semiboldbold 2xl:text-3xl">
-            Quienes somos?
+            Quiénes somos?
           </p>
           <FaArrowRight size={30} />
         </Link>

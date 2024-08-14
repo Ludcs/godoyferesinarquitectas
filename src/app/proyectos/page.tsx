@@ -20,7 +20,7 @@ export default function Proyectos() {
               className="w-full h-auto brightness-50 transition-all duration-200 ease-in hover:brightness-100"
             />
             <div className="pl-2 pb-2 text-white absolute z-[2] bottom-0 left-0">
-              <h2 className="text-white font-bold text-2xl">Tres Duplex</h2>
+              <h2 className="text-white font-bold text-2xl">Tres Dúplex</h2>
               <p>Paraná, Entre Ríos, Argentina.</p>
             </div>
           </Link>
@@ -47,7 +47,7 @@ export default function Proyectos() {
             />
             <div className="pl-2 pb-2 text-white absolute z-[2] bottom-0 left-0">
               <h2 className="text-white font-bold text-2xl">
-                Ampliación Villaguay
+                Ampliación Casa Villaguay
               </h2>
               <p>Villaguay, Entre Ríos, Argentina.</p>
             </div>
