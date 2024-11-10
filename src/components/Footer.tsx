@@ -34,13 +34,13 @@ export default function Footer() {
           <div className=" my-2 flex flex-col gap-2">
             <p>- teléfono:</p>
             <Link
-              href={"https://api.whatsapp.com/send?phone=5493435028431"}
+              href={"https://api.whatsapp.com/send?phone=5493435054637"}
               target="_blank"
               title="WhatsApp"
               className="underline underline-offset-8"
             >
               <p className="hover:text-gray-400 transition-all duration-200">
-                {"343 5028431"}
+                {"343 5054637"}
               </p>{" "}
             </Link>
           </div>
